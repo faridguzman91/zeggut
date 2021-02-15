@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="17008" id="nl.zeggut.app" version="1.7.8" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Zeggut</name>
+    <description>Zeggut v1.7.8</description>
+    <author email="apps@creapolis.nl" href="https://creapolis.nl">Creapolis Media</author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-navigation href="https://*youtube.*/*" />
+    <allow-navigation href="https://*vimeo.*/*" />
+    <allow-navigation href="https://*vimeocdn.*/*" />
+    <allow-navigation href="https://*ytimg.*/*" />
+    <preference name="phonegap-version" value="cli-9.0.0" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="Fullscreen" value="false" />
+    <preference name="BackgroundColor" value="0xff0000ff" />
+    <preference name="HideKeyboardFormAccessoryBar" value="true" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashScreenDelay" value="500" />
+    <preference name="SplashScreenBackgroundColor" value="white" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="ShowSplashScreenSpinner" value="true" />
+    <preference name="FadeSplashScreen" value="false" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <plugin name="cordova-plugin-camera" spec="4.0.3">
+        <variable name="CAMERA_USAGE_DESCRIPTION" value="Zeggut would like to access the camera, to take (or select) a photo when this is a question." />
+        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="Zeggut would like to access the camera, to take (or select) a photo when this is a question." />
+    </plugin>
+    <edit-config file="*-Info.plist" mode="overwrite" platform="ios" target="NSCameraUsageDescription">
+        <string>Zeggut would like to access the camera, to take (or select) a photo when this is a question.</string>
+    </edit-config>
+    <edit-config file="*-Info.plist" mode="overwrite" platform="ios" target="NSPhotoLibraryUsageDescription">
+        <string>Zeggut would like to access the camera, to take (or select) a photo when this is a question.</string>
+    </edit-config>
+    <edit-config file="*-Info.plist" mode="overwrite" platform="ios" target="NSBluetoothPeripheralUsageDescription">
+        <string>This app requires Bluetooth to connect to our beacons when this is enabled in the access code you are using.</string>
+    </edit-config>
+    <edit-config file="*-Info.plist" mode="overwrite" platform="ios" target="NSBluetoothAlwaysUsageDescription">
+        <string>This app requires Bluetooth to connect to our beacons when this is enabled in the access code you are using.</string>
+    </edit-config>
+    <plugin name="cordova-plugin-file-transfer" spec="1.7.1" />
+    <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
+    <plugin name="cordova-plugin-device" spec="2.0.2" />
+    <plugin name="cordova-plugin-dialogs" spec="2.0.1" />
+    <plugin name="cordova-unique-device-id" spec="1.3.2" />
+    <plugin name="cordova-plugin-whitelist" spec="1.3.3" />
+    <plugin name="cordova-plugin-screen-orientation" spec="3.0.1" />
+    <feature name="CDVWKWebViewEngine">
+        <param name="ios-package" value="CDVWKWebViewEngine" />
+    </feature>
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+    <plugin name="cordova-plugin-badge" spec="0.8.8" />
+    <plugin name="phonegap-plugin-push" spec="2.3.0">
+        <variable name="SENDER_ID" value="1:1010592068648:android:6cff0a7d8ce6fed8" />
+    </plugin>
+    <platform name="android">
+        <resource-file src="google-services.json" target="app/google-services.json" />
+        <allow-intent href="market:*" />
+        <preference name="android-build-tool" value="gradle" />
+        <preference name="android-minSdkVersion" value="19" />
+        <preference name="android-installLocation" value="auto" />
+        <preference name="android-targetSdkVersion" value="28" />
+        <icon density="ldpi" src="www/res/icon/android/ldpi.png" />
+        <icon density="mdpi" src="www/res/icon/android/mdpi.png" />
+        <icon density="hdpi" src="www/res/icon/android/hdpi.png" />
+        <icon density="xhdpi" src="www/res/icon/android/xhdpi.png" />
+        <icon density="xxhdpi" src="www/res/icon/android/xxhdpi.png" />
+        <splash density="land-hdpi" src="www/res/screen/android/splash-land-hdpi.png" />
+        <splash density="land-ldpi" src="www/res/screen/android/splash-land-ldpi.png" />
+        <splash density="land-mdpi" src="www/res/screen/android/splash-land-mdpi.png" />
+        <splash density="land-xhdpi" src="www/res/screen/android/splash-land-xhdpi.png" />
+        <splash density="port-hdpi" src="www/res/screen/android/splash-port-hdpi.png" />
+        <splash density="port-ldpi" src="www/res/screen/android/splash-port-ldpi.png" />
+        <splash density="port-mdpi" src="www/res/screen/android/splash-port-mdpi.png" />
+        <splash density="port-xhdpi" src="www/res/screen/android/splash-port-xhdpi.png" />
+    </platform>
+    <platform name="ios">
+        <resource-file src="GoogleService-Info.plist" />
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <preference name="prerendered-icon" value="true" />
+        <preference name="detect-data-types" value="true" />
+        <preference name="exit-on-suspend" value="false" />
+        <preference name="MediaPlaybackAllowsAirPlay" value="false" />
+        <preference name="MediaPlaybackRequiresUserAction" value="false" />
+        <preference name="AllowInlineMediaPlayback" value="true" />
+        <preference name="TopActivityIndicator" value="white" />
+        <preference name="target-device" value="1,2" />
+        <preference name="stay-in-webview" value="false" />
+        <preference name="ios-statusbarstyle" value="black-opaque" />
+        <icon height="1024" src="www/res/icon/ios/icon-1024.png" width="1024" />
+        <icon height="180" src="www/res/icon/ios/icon-60@3x.png" width="180" />
+        <icon height="60" src="www/res/icon/ios/icon-60.png" width="60" />
+        <icon height="120" src="www/res/icon/ios/icon-60@2x.png" width="120" />
+        <icon height="76" src="www/res/icon/ios/icon-76.png" width="76" />
+        <icon height="152" src="www/res/icon/ios/icon-76@2x.png" width="152" />
+        <icon height="167" src="www/res/icon/ios/icon-83.5@2x.png" width="167" />
+        <icon height="29" src="www/res/icon/ios/icon-small.png" width="29" />
+        <icon height="58" src="www/res/icon/ios/icon-small@2x.png" width="58" />
+        <icon height="87" src="www/res/icon/ios/icon-small@3x.png" width="87" />
+        <icon height="40" src="www/res/icon/ios/icon-40.png" width="40" />
+        <icon height="80" src="www/res/icon/ios/icon-40@2x.png" width="80" />
+        <icon height="120" src="www/res/icon/ios/icon-40@3x.png" width="120" />
+        <icon height="57" src="www/res/icon/ios/icon.png" width="57" />
+        <icon height="114" src="www/res/icon/ios/icon@2x.png" width="114" />
+        <icon height="72" src="www/res/icon/ios/icon-72.png" width="72" />
+        <icon height="144" src="www/res/icon/ios/icon-72@2x.png" width="144" />
+        <icon height="50" src="www/res/icon/ios/icon-50.png" width="50" />
+        <icon height="100" src="www/res/icon/ios/icon-50@2x.png" width="100" />
+        <splash src="www/res/screen/ios/Default@2x~universal~anyany.png" />
+    </platform>
+</widget>

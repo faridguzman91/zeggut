@@ -1,0 +1,155 @@
+#beacon,
+#events{
+  color:#fff;
+  background-color:rgba(0,0,0,.8);
+}
+
+.pulse-icon{
+	position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin: 100px -30px;
+}
+/*icon styling here*/
+.pulse-icon .icon-wrap{
+   position: relative;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0px 12px 12px 0px rgba(0,0,0,0.1);
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  color: #6A1B9A;
+  background: #efefef;
+  position: relative;
+  z-index: 2;
+}
+.pulse-icon .icon{
+  line-height: 60px;
+  font-size: 2.5em;
+  animation: grow-shrink 4s ease-out infinite;
+}
+
+/*container of all circles and pulses*/
+.pulse-icon .elements{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+.pulse-icon .circle{
+  border-radius: 50%;
+  position: absolute;
+}
+.pulse-icon .circle-inner{
+  width: 80px;
+  height: 80px;
+  top: -10px;
+  left: -10px;
+  background: linear-gradient(-180deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.1) 100%);
+  animation: grow-circles 4s linear infinite both;
+}
+.pulse-icon .circle-outer{
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(-180deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.1) 100%);
+  top: -20px;
+  left: -20px;
+  animation: grow-circles 4s linear infinite both;
+}
+
+/*series of x pulses of differing sizes*/
+.pulse-icon .pulse{
+  position: absolute;
+  animation: pulse-wave 4s linear infinite both;
+  border-radius: 50%;
+}
+.pulse-icon .pulse-1{
+  border: solid 1px rgba(255,255,255,0.25);
+  width: 200px;
+  height: 200px;
+  top: -70px;
+  left: -70px;
+}
+.pulse-icon .pulse-2{
+  border: solid 1px rgba(255,255,255,0.35);
+  width: 300px;
+  height: 300px;
+  top: -120px;
+  left: -120px;
+}
+.pulse-icon .pulse-3{
+  border: solid 1px rgba(255,255,255,0.45);
+  width: 400px;
+  height: 400px;
+  top: -170px;
+  left: -170px;
+}
+.pulse-icon .pulse-4{
+  border: solid 1px rgba(255,255,255,0.55);
+  width: 500px;
+  height: 500px;
+  top: -220px;
+  left: -220px;
+}
+.pulse-icon .pulse-5{
+  border: solid 1px rgba(255,255,255,0.65);
+  width: 600px;
+  height: 600px;
+  top: -270px;
+  left: -270px;
+}
+.pulse-icon .pulse-6{
+  border: solid 1px rgba(255,255,255,0.65);
+  width: 700px;
+  height: 700px;
+  top: -320px;
+  left: -320px;
+}
+
+
+/*Animation for the outewards pulsating waves*/
+@keyframes pulse-wave{
+  0%{
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  50%{
+    opacity: 1;
+    transform: scale(0.5);
+  }
+  100%{
+    opacity: 0;
+    transform: scale(1.0);
+  }
+}
+
+/*animation for the inner and outer wave items to grow*/
+@keyframes grow-circles{
+  0%{
+    opacity: 0.85;
+    transform: scale(1.0);
+  }
+  15%{
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  30%{
+    opacity: 0.85;
+    transform: scale(1.0);
+  }
+  
+}
+
+/*animation for the icon to slightly grow and shrink*/
+@keyframes grow-shrink{
+  0%{
+    transform: scale(1);
+  }
+  15%{
+    transform: scale(1.1);
+  }
+  30%{
+    transform: scale(1);
+  }
+}

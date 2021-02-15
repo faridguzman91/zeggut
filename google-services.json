@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1010592068648",
+    "firebase_url": "https://zeggut-crea-01.firebaseio.com",
+    "project_id": "zeggut-crea-01",
+    "storage_bucket": "zeggut-crea-01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010592068648:android:6cff0a7d8ce6fed8",
+        "android_client_info": {
+          "package_name": "nl.zeggut.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010592068648-dnik1jfpa60kp0j34v1b3sif9u7sb4gt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvXsZbzvXlbIP8V37KkB6_T9k2kCNiDH4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
