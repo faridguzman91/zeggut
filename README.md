@@ -1,6 +1,6 @@
 # Zeggut app
 
-<img src="https://github.com/faridguzman91/zeggut/blob/main/www/icon.png">
+<img src="https://github.com/faridguzman91/zeggut/blob/main/www/icon.png" style="width: 100px; height: 100px;">
 
 ## Opmerkingen
 Er zijn een aantal depenencies aangepast vanaf het phonegap project:
