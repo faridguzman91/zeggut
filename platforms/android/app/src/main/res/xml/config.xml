@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="17008" id="nl.zeggut.app" version="1.7.8" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="cdvfile:*" />
+    <feature name="FileTransfer">
+        <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="UniqueDeviceID">
+        <param name="android-package" value="hu.dpal.phonegap.plugins.UniqueDeviceID" />
+    </feature>
+    <feature name="CDVOrientation">
+        <param name="android-package" value="cordova.plugins.screenorientation.CDVOrientation" />
+    </feature>
+    <feature name="PushNotification">
+        <param name="android-package" value="com.adobe.phonegap.push.PushPlugin" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <feature name="Badge">
+        <param name="android-package" value="de.appplant.cordova.plugin.badge.Badge" />
+    </feature>
+    <name>Zeggut</name>
+    <description>Zeggut v1.7.8</description>
+    <author email="apps@creapolis.nl" href="https://creapolis.nl">Creapolis Media</author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-navigation href="https://*youtube.*/*" />
+    <allow-navigation href="https://*vimeo.*/*" />
+    <allow-navigation href="https://*vimeocdn.*/*" />
+    <allow-navigation href="https://*ytimg.*/*" />
+    <edit-config file="*-Info.plist" mode="overwrite" platform="ios" target="NSCameraUsageDescription">
+        <string>Zeggut would like to access the camera, to take (or select) a photo when this is a question.</string>
+    </edit-config>
+    <edit-config file="*-Info.plist" mode="overwrite" platform="ios" target="NSPhotoLibraryUsageDescription">
+        <string>Zeggut would like to access the camera, to take (or select) a photo when this is a question.</string>
+    </edit-config>
+    <edit-config file="*-Info.plist" mode="overwrite" platform="ios" target="NSBluetoothPeripheralUsageDescription">
+        <string>This app requires Bluetooth to connect to our beacons when this is enabled in the access code you are using.</string>
+    </edit-config>
+    <edit-config file="*-Info.plist" mode="overwrite" platform="ios" target="NSBluetoothAlwaysUsageDescription">
+        <string>This app requires Bluetooth to connect to our beacons when this is enabled in the access code you are using.</string>
+    </edit-config>
+    <resource-file src="google-services.json" target="app/google-services.json" />
+    <allow-intent href="market:*" />
+    <icon density="ldpi" src="www/res/icon/android/ldpi.png" />
+    <icon density="mdpi" src="www/res/icon/android/mdpi.png" />
+    <icon density="hdpi" src="www/res/icon/android/hdpi.png" />
+    <icon density="xhdpi" src="www/res/icon/android/xhdpi.png" />
+    <icon density="xxhdpi" src="www/res/icon/android/xxhdpi.png" />
+    <splash density="land-hdpi" src="www/res/screen/android/splash-land-hdpi.png" />
+    <splash density="land-ldpi" src="www/res/screen/android/splash-land-ldpi.png" />
+    <splash density="land-mdpi" src="www/res/screen/android/splash-land-mdpi.png" />
+    <splash density="land-xhdpi" src="www/res/screen/android/splash-land-xhdpi.png" />
+    <splash density="port-hdpi" src="www/res/screen/android/splash-port-hdpi.png" />
+    <splash density="port-ldpi" src="www/res/screen/android/splash-port-ldpi.png" />
+    <splash density="port-mdpi" src="www/res/screen/android/splash-port-mdpi.png" />
+    <splash density="port-xhdpi" src="www/res/screen/android/splash-port-xhdpi.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="phonegap-version" value="cli-9.0.0" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="Fullscreen" value="false" />
+    <preference name="BackgroundColor" value="0xff0000ff" />
+    <preference name="HideKeyboardFormAccessoryBar" value="true" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashScreenDelay" value="500" />
+    <preference name="SplashScreenBackgroundColor" value="white" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="ShowSplashScreenSpinner" value="true" />
+    <preference name="FadeSplashScreen" value="false" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="android-minSdkVersion" value="19" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="android-targetSdkVersion" value="28" />
+</widget>

@@ -1,0 +1,75 @@
+{
+  "_args": [
+    [
+      "cordova-unique-device-id@1.3.2",
+      "D:\\zeggut-app\\app"
+    ]
+  ],
+  "_development": true,
+  "_from": "cordova-unique-device-id@1.3.2",
+  "_id": "cordova-unique-device-id@1.3.2",
+  "_inBundle": false,
+  "_integrity": "sha512-CUt+x4xLVZaf2d6Oy0LN18f4KMQ+Nofw0vTVY+djUCuw31yWYFJ8RWRFNeztPE93WK9+E+EheSaQPPGViI+Jtg==",
+  "_location": "/cordova-unique-device-id",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "cordova-unique-device-id@1.3.2",
+    "name": "cordova-unique-device-id",
+    "escapedName": "cordova-unique-device-id",
+    "rawSpec": "1.3.2",
+    "saveSpec": null,
+    "fetchSpec": "1.3.2"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-unique-device-id/-/cordova-unique-device-id-1.3.2.tgz",
+  "_spec": "1.3.2",
+  "_where": "D:\\zeggut-app\\app",
+  "author": {
+    "name": "John Doherty",
+    "email": "contact@johndoherty.info",
+    "url": "http://www.johndoherty.info"
+  },
+  "bugs": {
+    "url": "https://github.com/john-doherty/cordova-unique-device-id/issues"
+  },
+  "cordova": {
+    "id": "cordova-unique-device-id",
+    "platforms": [
+      "ios",
+      "android",
+      "wp8"
+    ]
+  },
+  "description": "Cordova unique device id (UUID) plugin for Android, iOS and Windows Phone 8. Remains the same after app uninstall.",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "homepage": "https://github.com/john-doherty/cordova-unique-device-id#readme",
+  "keywords": [
+    "phonegap",
+    "cordova",
+    "android",
+    "ios",
+    "wp",
+    "Windows",
+    "phone",
+    "device",
+    "id",
+    "uuid",
+    "unique"
+  ],
+  "license": "MIT",
+  "name": "cordova-unique-device-id",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/john-doherty/cordova-unique-device-id.git"
+  },
+  "version": "1.3.2"
+}
