@@ -25,7 +25,7 @@ Open een terminal met beheerdersrechten en typ in:
 <br>
 *Install <strong>Java Development Kit 8</strong> (required)
 <br>
-*voor cordova-android 6.4, install <strong>Gradle</strong> (required)
+*voor cordova-android 6.4, install <strong><a href ="https://gradle.org/next-steps/?version=6.8.2&format=all">Gradle</a></strong> (required)
 
 
 
