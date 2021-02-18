@@ -34,6 +34,15 @@ check in je terminal
 of in de terminal
 <code>$ sdk install gradle 6.8.2</code> (required)
 
+Zorg na het installeren dat je Environment Variables goed staan <br>
+Open 'Environment Variables' / update jouw <code>PATH</code> variabelen met nieuwe directories: <br>
+C:\Users\[username]\AppData\Local\Android\Sdk\platform-tools
+<br>
+C:\Users\[username]\AppData\Local\Android\Sdk\tools
+<br>
+Voeg nieuwe variabelen toe: <code><strong>JAVA_HOME</strong></code> en <code><strong>ANDROID_SDK_ROOT</strong></code>
+
+
 
 
 ## Builden
