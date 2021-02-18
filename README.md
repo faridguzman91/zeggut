@@ -21,6 +21,8 @@ Open een terminal met beheerdersrechten en typ in:
 <code>Set-ExecutionPolicy RemoteSigned -Scope LocalMachine </code>      // Gebruik deze om zeker te weten dat je alle rechten hebt
 <br>
 
+<strong>Android</strong>
+
 *Install <strong><a href ="https://redirector.gvt1.com/edgedl/android/studio/install/4.1.2.0/android-studio-ide-201.7042882-windows.exe">Android Studio</a></strong> , en vervolgens alle SDK downloaden vanaf versie 3.7xxx en v 29.0 en hoger (required)
 <br>
 *Install <strong>Java Development Kit 8</strong> (required)
