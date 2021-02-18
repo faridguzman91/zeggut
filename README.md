@@ -21,11 +21,11 @@ Open een terminal met beheerdersrechten en typ in:
 <code>Set-ExecutionPolicy RemoteSigned -Scope LocalMachine </code>      // Gebruik deze om zeker te weten dat je alle rechten hebt
 <br>
 
-*Install Android Studio , en vervolgens alle SDK downloaden vanaf versie 3.7xxx en v 29.0 en hoger (required)
+*Install <strong>Android Studio</strong> , en vervolgens alle SDK downloaden vanaf versie 3.7xxx en v 29.0 en hoger (required)
 <br>
-*Install Java Development Kit 8 (required)
+*Install <strong>Java Development Kit 8</strong> (required)
 <br>
-*voor cordova-android 6.4, install Gradle (required)
+*voor cordova-android 6.4, install <strong>Gradle</strong> (required)
 
 
 
