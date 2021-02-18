@@ -40,7 +40,7 @@ Open 'Environment Variables' / update jouw <code>PATH</code> variabelen met nieu
 <br>
 <em>C:\Users\[username]\AppData\Local\Android\Sdk\tools</em>
 <br>
-Voeg nieuwe variabelen toe: <code><strong>JAVA_HOME</strong></code> en <code><strong>ANDROID_SDK_ROOT</strong></code>
+Voeg nieuwe variabelen toe: <code><strong>JAVA_HOME</strong></code> en <code><strong>ANDROID_SDK_ROOT</strong></code>, en voeg vervolgens je install directories toe. (java sdk en android sdk)
 
 
 
