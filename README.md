@@ -28,10 +28,10 @@ Open een terminal met beheerdersrechten en typ in:
 *Install <strong>Java Development Kit 8</strong> (required)
 check in je terminal 
 <br>
-<code> $ java -version
+<code> $ java -version </code>
   <br>
-java version "1.8.0_121" 
-</code>
+<code> java version "1.8.0_121" </code>
+
 <br>
 *voor cordova-android 6.4, install <strong><a href ="https://gradle.org/next-steps/?version=6.8.2&format=all">Gradle</a></strong> 
 of in de terminal
