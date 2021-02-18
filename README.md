@@ -29,6 +29,7 @@ Open een terminal met beheerdersrechten en typ in:
 check in je terminal 
 <br>
 <code> $ java -version
+  <br>
 java version "1.8.0_121" 
 </code>
 <br>
