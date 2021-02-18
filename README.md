@@ -26,8 +26,15 @@ Open een terminal met beheerdersrechten en typ in:
 *Install <strong><a href ="https://redirector.gvt1.com/edgedl/android/studio/install/4.1.2.0/android-studio-ide-201.7042882-windows.exe">Android Studio</a></strong> , en vervolgens alle SDK downloaden vanaf versie 3.7xxx en v 29.0 en hoger (required)
 <br>
 *Install <strong>Java Development Kit 8</strong> (required)
+check in je terminal 
 <br>
-*voor cordova-android 6.4, install <strong><a href ="https://gradle.org/next-steps/?version=6.8.2&format=all">Gradle</a></strong> (required)
+<code> $ java -version
+java version "1.8.0_121" 
+</code>
+<br>
+*voor cordova-android 6.4, install <strong><a href ="https://gradle.org/next-steps/?version=6.8.2&format=all">Gradle</a></strong> 
+of in de terminal
+<code>$ sdk install gradle 6.8.2</code> (required)
 
 
 
