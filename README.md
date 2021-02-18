@@ -14,9 +14,16 @@ Ga in een terminal naar de map waar het project staat en draai `npm install` om 
 *Update: Eerst <code>npm install -g cordova</code> intypen, en zorg daar na dat je PowerShell/Terminal privileges in orde zijn.
 Open een terminal met beheerdersrechten en typ in:
 
-Get-ExecutionPolicy -List                                  // Beleid geset voor de user
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser        // Om de scripts te kunnen runnen met alle rechten
-Set-ExecutionPolicy RemoteSigned -Scope LocalMachine       // Gebruik deze om zeker te weten dat je alle rechten hebt
+<code>Get-ExecutionPolicy -List </code>                                 // Beleid geset voor de user
+<br>
+<code>Set-ExecutionPolicy RemoteSigned -Scope CurrentUser </code>       // Om de scripts te kunnen runnen met alle rechten
+<br>
+<code>Set-ExecutionPolicy RemoteSigned -Scope LocalMachine </code>      // Gebruik deze om zeker te weten dat je alle rechten hebt
+<br>
+
+*Install Android Studio , en vervolgens alle SDK downloaden vanaf versie 3.7xxx en v 29.0 en hoger (required)
+*Install Java Development Kit 8 (required)
+*voor cordova-android 6.4, install Gradle (required)
 
 
 
