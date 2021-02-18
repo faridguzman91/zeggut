@@ -29,10 +29,7 @@ Open een terminal met beheerdersrechten en typ in:
 check in je terminal 
 <br>
 <code> $ java -version </code>
-  <br>
-<code> java version "1.8.0_121" </code>
-
-<br>
+ <br>
 *voor cordova-android 6.4, install <strong><a href ="https://gradle.org/next-steps/?version=6.8.2&format=all">Gradle</a></strong> 
 of in de terminal
 <code>$ sdk install gradle 6.8.2</code> (required)
