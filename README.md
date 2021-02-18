@@ -22,7 +22,9 @@ Open een terminal met beheerdersrechten en typ in:
 <br>
 
 *Install Android Studio , en vervolgens alle SDK downloaden vanaf versie 3.7xxx en v 29.0 en hoger (required)
+<br>
 *Install Java Development Kit 8 (required)
+<br>
 *voor cordova-android 6.4, install Gradle (required)
 
 
