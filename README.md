@@ -45,7 +45,8 @@ Voeg nieuwe variabelen toe: <code><strong>JAVA_HOME</strong></code> en <code><st
 Download Gradle, maak een nieuwe <code>C:\Gradle</code> folder aan en unzip alles hier in, daarna voeg je deze in je <code>PATH</code> in je system variables.
 <br>
 <br>
-
+Eventueel gradle build update met <code>gradle -v</code> en <code>gradlew tasks</code>
+<br>
 Open de <strong>app</strong> folder in Android Studio als nieuw project en open de terminal hier in, en typ <code>cordova build android</code>, om te builden. 
 
 
