@@ -49,6 +49,10 @@ Eventueel gradle build update met de wrapper <code>gradle -v</code> en <code>gra
 <br>
 Open de <strong>app</strong> folder in Android Studio als nieuw project en open de terminal hier in, en typ <code>cordova build android</code>, om te builden. 
 
+*Extra 
+<br> Als de build niet succesvol is, check in file>settings>appearance & behavior>android sdk en check of je alle google sdk's hebt hebt gecheckt en gedownload hebt.
+(zie stackoverflow)
+
 
 
 
