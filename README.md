@@ -41,6 +41,12 @@ Open 'Environment Variables' / update jouw <code>PATH</code> variabelen met nieu
 <em>C:\Users\[username]\AppData\Local\Android\Sdk\tools</em>
 <br>
 Voeg nieuwe variabelen toe: <code><strong>JAVA_HOME</strong></code> en <code><strong>ANDROID_SDK_ROOT</strong></code>, en voeg vervolgens je install directories toe. (java sdk en android sdk)
+<br>
+Download Gradle, maak een nieuwe <code>C:\Gradle</code> folder aan en unzip alles hier in, daarna voeg je deze in je <code>PATH</code> in je system variables.
+<br>
+<br>
+
+Open de <strong>app</strong> folder in Android Studio als nieuw project en open de terminal hier in, en typ <code>cordova build android</code>, om te builden. 
 
 
 
