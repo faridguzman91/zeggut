@@ -58,16 +58,21 @@ Open de <strong>app</strong> folder in Android Studio als nieuw project en open 
 <strong>iOS</strong>
 <br>
 *Download en install XCode in de App Store. <br>
+
 *Open je terminal en zorg dat Homebrew geinstalleerd is<br>
+
 typ <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code><br>
-daarna <code>$ brew install wget</code>
+
+daarna <code>$ brew install wget</code><br>
+
 *ga naar je directory met <code>cd</code> vervolgens installeer je met npm de cordova dependency met <code>npm install -g cordova</code> <br>
+
 *Daarna install je benodigde tools om cordova te runnen met: <code> $ xcode-select --install </code> <br>
 *Vervolgens om te kunnen deployen, installer ios-deploy <code> $ brew install ios-deploy </code>
 *Installeer hierna CocoaPods om te kunnen builden <code>$ sudo gem install cocoapods</code>
 
-
-
+<br>
+<br>
 Om de app naar de Simulator te deployen, open je met de terminal de workspace <code>$ open ./platforms/ios/HelloWorld.xcworkspace/</code>
 selecteer in XCode de simulator links boven de druk op Play.
 
