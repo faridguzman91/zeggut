@@ -68,7 +68,8 @@ daarna <code>$ brew install wget</code><br>
 *ga naar je directory met <code>cd</code> vervolgens installeer je met npm de cordova dependency met <code>npm install -g cordova</code> <br>
 
 *Daarna install je benodigde tools om cordova te runnen met: <code> $ xcode-select --install </code> <br>
-*Vervolgens om te kunnen deployen, installer ios-deploy <code> $ brew install ios-deploy </code>
+*Vervolgens om te kunnen deployen, installer ios-deploy <code> $ brew install ios-deploy </code><br>
+
 *Installeer hierna CocoaPods om te kunnen builden <code>$ sudo gem install cocoapods</code>
 
 <br>
