@@ -36,10 +36,12 @@ of in de terminal
 
 *Zorg na het installeren dat je Environment Variables goed staan <br>
 Open 'Environment Variables' / update jouw <code>PATH</code> variabelen met nieuwe directories: <br>
+
 <em>C:\Users\[username]\AppData\Local\Android\Sdk\platform-tools</em>
 <br>
 <em>C:\Users\[username]\AppData\Local\Android\Sdk\tools</em>
 <br>
+
 Voeg nieuwe variabelen toe: <code><strong>JAVA_HOME</strong></code> en <code><strong>ANDROID_SDK_ROOT</strong></code>, en voeg vervolgens je install directories toe. (java sdk en android sdk)
 <br>
 Download Gradle, maak een nieuwe <code>C:\Gradle</code> folder aan en unzip alles hier in, daarna voeg je deze in je <code>PATH</code> in je system variables.
