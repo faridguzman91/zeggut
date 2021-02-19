@@ -1,402 +1,371 @@
 <!DOCTYPE html>
 <html>
-<head> 
+
+<head>
     <meta charset="utf-8">
-	<meta http-equiv="Content-Security-Policy"/>
+    <meta http-equiv="Content-Security-Policy" />
     <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">-->
 
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
-	
-	<meta name="apple-mobile-web-app-capable" content="no">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	
+
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
     <link href="css/__normalize.css" rel="stylesheet" type="text/css">
-    <link href="css/_default.css" rel="stylesheet" type="text/css">        
-   
+    <link href="css/_default.css" rel="stylesheet" type="text/css">
+
     <link href="css/hint.min.css" rel="stylesheet" type="text/css">
-    	
-    <link href="css/font.css" rel="stylesheet" type="text/css"> 
-    <link href="css/menu.css" rel="stylesheet" type="text/css">       
+
+    <link href="css/font.css" rel="stylesheet" type="text/css">
+    <link href="css/menu.css" rel="stylesheet" type="text/css">
     <link href="css/pageslider.css" rel="stylesheet" type="text/css">
     <link href="css/animate.css" rel="stylesheet" type="text/css">
     <link href="css/nprogress.css" rel="stylesheet" type="text/css">
-	
+
     <link href="css/message.css" rel="stylesheet" type="text/css">
     <link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css">
-	<link href="css/jquery.ui.min.css" rel="stylesheet" type="text/css">
-   
-    <link href="css/beacon.css" rel="stylesheet" type="text/css">  
+    <link href="css/jquery.ui.min.css" rel="stylesheet" type="text/css">
 
-    <link href="css/app.css" rel="stylesheet" type="text/css">    
+    <link href="css/beacon.css" rel="stylesheet" type="text/css">
+
+    <link href="css/app.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-	
+
 </head>
+
 <body>
-	
-		<section id="loading">		
-			<div id="loading_wrapper"> 
-				<span class="loading_image animated pulse"></span>
-				<span class="loading_text animated bounceIn">Loading <i class="animated infinite flash">.</i><i class="animated infinite flash">.</i><i class="animated infinite flash">.</i></span>
-			</div>
-		</section>
-            
-        <div id="menu">
-            <header class="bar">
-            	<h1>Menu</h1>
-            </header>
-			<ul>
-			<script id="menu_tpl" type="text/x-handlebars-template">
-				{{#each this}}
-					<li><a href="{{this.href}}" {{#if this.onclick}} onclick="{{{this.onclick}}}" {{/if}}>{{{this.name}}}</a></li>
-				{{/each}}
-			</script>            
-			</ul>
-			
-			<footer></footer>
-        </div> 
-        
-        <div id="leaderboard_score" onclick="router.load('leaderboard');">
-			<div class="leaderboard_score"><span>0</span></div>        	
+
+    <section id="loading">
+        <div id="loading_wrapper">
+            <span class="loading_image animated pulse"></span>
+            <span class="loading_text animated bounceIn">Loading <i class="animated infinite flash">.</i><i class="animated infinite flash">.</i><i class="animated infinite flash">.</i></span>
         </div>
-        	
-        <div id="app">
-			
-        	<script id="loading_tpl" type="text/x-handlebars-template">
-				<div id="menu_clicker"></div>			
-				<section id="loading">		
-					<div id="loading_wrapper"> 
-						<span class="loading_image animated pulse"></span>
-						<span class="loading_text animated bounceIn">Loading <i class="animated infinite flash">.</i><i class="animated infinite flash">.</i><i class="animated infinite flash">.</i></span>
-					</div>
-				</section>			
-			</script>
-        
-			<script id="login_tpl" type="text/x-handlebars-template">
-                <header class="bar">
-                    <h1>Voer code in</h1>
-                </header>
-                <section class="content content_header logo_image">
-					<p></p>
-                	<form id="form_login" class="textcenter">
-	                    <input type="hidden" name="cmd" value="login">
-						<input type="text" name="code"  class="maxw200">
-        				<a href="javascript:;" class="btn btn-primary" id="login_submit"><i class="fas fa-play-circle"></i></a>
-                    </form>					
-                </section>
-            </script>		
-                
-            <script id="intro_tpl" type="text/x-handlebars-template">
+    </section>
+
+    <div id="menu">
+        <header class="bar">
+            <h1>Menu</h1>
+        </header>
+        <ul>
+            <script id="menu_tpl" type="text/x-handlebars-template">
+                {{#each this}}
+                <li><a href="{{this.href}}" {{#if this.onclick}} onclick="{{{this.onclick}}}" {{/if}}>{{{this.name}}}</a></li>
+                {{/each}}
+            </script>
+        </ul>
+
+        <footer></footer>
+    </div>
+
+    <div id="leaderboard_score" onclick="router.load('leaderboard');">
+        <div class="leaderboard_score"><span>0</span></div>
+    </div>
+
+    <div id="app">
+
+        <script id="loading_tpl" type="text/x-handlebars-template">
+            <div id="menu_clicker"></div>
+            <section id="loading">
+                <div id="loading_wrapper">
+                    <span class="loading_image animated pulse"></span>
+                    <span class="loading_text animated bounceIn">Loading <i class="animated infinite flash">.</i><i class="animated infinite flash">.</i><i class="animated infinite flash">.</i></span>
+                </div>
+            </section>
+        </script>
+
+        <script id="login_tpl" type="text/x-handlebars-template">
+            <header class="bar">
+                <h1>Voer code in</h1>
+            </header>
+            <section class="content content_header logo_image">
+                <p></p>
+                <form id="form_login" class="textcenter">
+                    <input type="hidden" name="cmd" value="login">
+                    <input type="text" name="code" class="maxw200">
+                    <a href="javascript:;" class="btn btn-primary" id="login_submit"><i class="fas fa-play-circle"></i></a>
+                </form>
+            </section>
+        </script>
+
+        <script id="intro_tpl" type="text/x-handlebars-template">
             <header class="bar">
                 <a class="right history_back_intro nav" href="#"><i class="fas fa-times"></i></a>
                 <h1>{{{header_uitleg}}}</h1>
             </header>
             <footer class="bar">
                 <a class="left nav" id="introductie_slider_prev"></a>
-                <a class="left nav" id="introductie_slider_next"></a>           
+                <a class="left nav" id="introductie_slider_next"></a>
                 <a class="right btn btn-primary" id="skip_intro"><i class="fas fa-check"></i> Overslaan</a>
             </footer>
-                    
+
             <section class="content content_header content_footer">
                 <ul class="introductie_slider">
-                {{#each intro}}
+                    {{#each intro}}
                     <li class="">
                         <div class="slider_bg" style="background-image:url('{{image}}')"></div>
                         <div class="slider_content">
                             <p class="slider_title bold">{{title}}</h1>
-                            <p class="slider_text">{{{text}}}</p>
-                        </div>                    
+                                <p class="slider_text">{{{text}}}</p>
+                        </div>
                     </li>
-                {{/each}}
+                    {{/each}}
                 </ul>
-            </section>      
-            </script>
-            
-			<script id="leaderboard_tpl" type="text/x-handlebars-template">
+            </section>
+        </script>
+
+        <script id="leaderboard_tpl" type="text/x-handlebars-template">
             <header class="bar">
                 <a class="right history_back_intro nav" href="#"><i class="fas fa-times"></i></a>
             </header>
             <section class="content content_header">
-				<div class="leaderboard_title"></div>				
-				<div class="leaderboard_top3_wrapper">
-					<div class="leaderboard_top3">
-						<div class="leaderboard_2_wrapper">
-							<div class="leaderboard_top3_user_image" style="background-image:url('{{leaderboard.[1].user_image}}');"></div>
-							<div class="leaderboard_2">
-								<span class="leaderboard_top3_name">{{leaderboard.[1].user_name}}</span>
-								<span class="leaderboard_top3_score">{{leaderboard.[1].score}}</span>
-							</div>
-							<div class="leaderboard_2_bg"></div>
-						</div>
-						<div class="leaderboard_1_wrapper">
-							<div class="leaderboard_top3_user_image" style="background-image:url('{{leaderboard.[0].user_image}}');"></div>
-							<div class="leaderboard_1">
-								<span class="leaderboard_top3_name">{{leaderboard.[0].user_name}}</span>
-								<span class="leaderboard_top3_score">{{leaderboard.[0].score}}</span>
-							</div>
-							<div class="leaderboard_1_bg"></div>
-						</div>
-						<div class="leaderboard_3_wrapper">
-							<div class="leaderboard_top3_user_image" style="background-image:url('{{leaderboard.[2].user_image}}');"></div>
-							<div class="leaderboard_3">
-								<span class="leaderboard_top3_name">{{leaderboard.[2].user_name}}</span>
-								<span class="leaderboard_top3_score">{{leaderboard.[2].score}}</span>
-							</div>
-							<div class="leaderboard_3_bg"></div>
-						</div>	
-					</div>
-				</div>			
-				<div class="leaderboard_list_wrapper">
-					<ul class="leaderboard_list">
-					{{#each leaderboard}}
-						<li>
-							<div class="leaderboard_user_image_wrapper"><div class="leaderboard_user_image" style="background-image:url('{{user_image}}');"></div></div>
-							<div class="leaderboard_rank">{{rank}}</div>
-							<div class="leaderboard_user_name">{{{user_name}}}</div>
-							<div class="leaderboard_score">{{{score}}}</div>
-						</li>
-					{{/each}}
-					</ul>
-				</div>
-            </section>      
-            </script>            
-            
-            <script id="home_tpl" type="text/x-handlebars-template">
-			
-				<header class="bar">
-					{{#if menu}}<div id="toggle-menu" onClick="toggleMenu();"><span></span></div>{{/if}}
-					{{#if intro}}<a class="right nav" id="link_goto_intro" href="#intro"><i class="far fa-question-circle"></i></a>{{/if}}	
-					<h1>{{{header_start}}}</h1>
-				</header>
+                <div class="leaderboard_title"></div>
+                <div class="leaderboard_top3_wrapper">
+                    <div class="leaderboard_top3">
+                        <div class="leaderboard_2_wrapper">
+                            <div class="leaderboard_top3_user_image" style="background-image:url('{{leaderboard.[1].user_image}}');"></div>
+                            <div class="leaderboard_2">
+                                <span class="leaderboard_top3_name">{{leaderboard.[1].user_name}}</span>
+                                <span class="leaderboard_top3_score">{{leaderboard.[1].score}}</span>
+                            </div>
+                            <div class="leaderboard_2_bg"></div>
+                        </div>
+                        <div class="leaderboard_1_wrapper">
+                            <div class="leaderboard_top3_user_image" style="background-image:url('{{leaderboard.[0].user_image}}');"></div>
+                            <div class="leaderboard_1">
+                                <span class="leaderboard_top3_name">{{leaderboard.[0].user_name}}</span>
+                                <span class="leaderboard_top3_score">{{leaderboard.[0].score}}</span>
+                            </div>
+                            <div class="leaderboard_1_bg"></div>
+                        </div>
+                        <div class="leaderboard_3_wrapper">
+                            <div class="leaderboard_top3_user_image" style="background-image:url('{{leaderboard.[2].user_image}}');"></div>
+                            <div class="leaderboard_3">
+                                <span class="leaderboard_top3_name">{{leaderboard.[2].user_name}}</span>
+                                <span class="leaderboard_top3_score">{{leaderboard.[2].score}}</span>
+                            </div>
+                            <div class="leaderboard_3_bg"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="leaderboard_list_wrapper">
+                    <ul class="leaderboard_list">
+                        {{#each leaderboard}}
+                        <li>
+                            <div class="leaderboard_user_image_wrapper">
+                                <div class="leaderboard_user_image" style="background-image:url('{{user_image}}');"></div>
+                            </div>
+                            <div class="leaderboard_rank">{{rank}}</div>
+                            <div class="leaderboard_user_name">{{{user_name}}}</div>
+                            <div class="leaderboard_score">{{{score}}}</div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </section>
+        </script>
 
-				<section class="content content_header" {{#if background_image}}style="background-image:url({{background_image}});"{{/if}}>
-				
-					{{#if leaderboard}}
-						<div class="leaderboard_list_wrapper">
-							<ul class="leaderboard_list pointer" onclick="router.load('leaderboard');return false;">
-								<li>
-									<!--<div class="leaderboard_user_image_wrapper"><div class="leaderboard_user_image" style="background-image:url('{{leaderboard_user_image}}');"></div></div>-->
-									<div class="leaderboard_image"></div>
-									<div class="leaderboard_user_name">KLASSEMENT</div>
-									<div class="leaderboard_score">{{score}}</div>
-								</li>
-							</ul>
-						</div>
-					{{/if}}				
-				
-					{{#if new_version_link}}
-						<div class="box_black">
-							<p>Er is een nieuwe versie beschikbaar.</p>
-							<a href="javascript:;" onclick="window.open('{{{new_version_link}}}','_system');" class="btn btn-positive" target="_top"><i class="fas fa-sync-alt"></i> Nu updaten</a>							
-						</div>
-					{{/if}}					
+        <script id="home_tpl" type="text/x-handlebars-template">
 
-					{{> questions}}
-				</section>
-            </script>
-            
-            <script id="questions_tpl" type="text/x-handlebars-template">
-			
-					{{#if questionnaire}}
-					
-							{{#if questionnaire_multiple}}  
-								<ul class="home_list">
-									{{#each questionnaires}}
-									<li class="home_list_color_{{inc @index inc=1}} progress{{progress}}">												
-										{{#if questionnaire_text}}
-											<div class="li_text_toggler">
-												<i class="fas fa-caret-down show_text_down"></i>
-												<i class="fas fa-caret-up show_text_up"></i>
-											</div>										
-										{{/if}}												
+            <header class="bar">
+                {{#if menu}}
+                <div id="toggle-menu" onClick="toggleMenu();"><span></span></div>{{/if}} {{#if intro}}<a class="right nav" id="link_goto_intro" href="#intro"><i class="far fa-question-circle"></i></a>{{/if}}
+                <h1>{{{header_start}}}</h1>
+            </header>
 
-										<a href="#question/{{this.next_question_id}}">
-											<span>{{questionnaire_name}}</span>
+            <section class="content content_header" {{#if background_image}}style="background-image:url({{background_image}});" {{/if}}>
 
-											{{#if questionnaire_text}}
-											<div class="home_list_text">{{{questionnaire_text}}}</div>
-											{{/if}}
-										</a>
-										
-										<div class="progress_bar"><span data-progress="{{progress}}%" data-progress-val="{{progress}}"></span></div>
-									</li>								
-									{{/each}}
-								</ul>
-							{{else}}
-								<div class="box_black">
-									{{{content_start_questions}}}
-								</div>					
-								<a href="javascript:;" class="btn btn-round btn-bottom" onclick="fa_loading(this); router.load('#question/{{next_question_id}}');"><i class="fas fa-play-circle"></i></a>								
-							{{/if}}
-				   {{else}}
-						<div class="box_black">
-							{{{content_start_no_questions}}}
-						</div>
-				   {{/if}}
+                {{#if leaderboard}}
+                <div class="leaderboard_list_wrapper">
+                    <ul class="leaderboard_list pointer" onclick="router.load('leaderboard');return false;">
+                        <li>
+                            <!--<div class="leaderboard_user_image_wrapper"><div class="leaderboard_user_image" style="background-image:url('{{leaderboard_user_image}}');"></div></div>-->
+                            <div class="leaderboard_image"></div>
+                            <div class="leaderboard_user_name">KLASSEMENT</div>
+                            <div class="leaderboard_score">{{score}}</div>
+                        </li>
+                    </ul>
+                </div>
+                {{/if}} {{#if new_version_link}}
+                <div class="box_black">
+                    <p>Er is een nieuwe versie beschikbaar.</p>
+                    <a href="javascript:;" onclick="window.open('{{{new_version_link}}}','_system');" class="btn btn-positive" target="_top"><i class="fas fa-sync-alt"></i> Nu updaten</a>
+                </div>
+                {{/if}} {{> questions}}
+            </section>
+        </script>
 
-				   {{#if beacons}}
-					<div class="pulse-icon">
-						<div class="icon-wrap">
-							<i class="icon fas fa-search-location"></i>
-						</div>
-						<div class="elements">
-							<div class="circle circle-outer"></div>
-							<div class="circle circle-inner"></div>
-							<div class="pulse pulse-1"></div>
-							<div class="pulse pulse-2"></div>
-							<div class="pulse pulse-3"></div>
-							<div class="pulse pulse-4"></div>
-							<div class="pulse pulse-5"></div>				 
-							<div class="pulse pulse-6"></div>
-						</div>
-					</div>			
-					<ul id="events" class="mt20"></ul>					
-					<ul id="beacon" class="mt20"></ul>
-				   {{/if}}
-            </script>
-            
-            <script id="page_tpl" type="text/x-handlebars-template">
-                <header class="bar">
-                    <a class="left history_back nav" href="#"><i class="fas fa-chevron-left"></i></a>
-                    <h1>{{{page.title}}}</h1>
-                </header>
-                <section class="content content_header" {{#if page.background_image}}style="background-image:url({{page.background_image}});"{{/if}}>
+        <script id="questions_tpl" type="text/x-handlebars-template">
+
+            {{#if questionnaire}} {{#if questionnaire_multiple}}
+            <ul class="home_list">
+                {{#each questionnaires}}
+                <li class="home_list_color_{{inc @index inc=1}} progress{{progress}}">
+                    {{#if questionnaire_text}}
+                    <div class="li_text_toggler">
+                        <i class="fas fa-caret-down show_text_down"></i>
+                        <i class="fas fa-caret-up show_text_up"></i>
+                    </div>
+                    {{/if}}
+
+                    <a href="#question/{{this.next_question_id}}">
+                        <span>{{questionnaire_name}}</span> {{#if questionnaire_text}}
+                        <div class="home_list_text">{{{questionnaire_text}}}</div>
+                        {{/if}}
+                    </a>
+
+                    <div class="progress_bar"><span data-progress="{{progress}}%" data-progress-val="{{progress}}"></span></div>
+                </li>
+                {{/each}}
+            </ul>
+            {{else}}
+            <div class="box_black">
+                {{{content_start_questions}}}
+            </div>
+            <a href="javascript:;" class="btn btn-round btn-bottom" onclick="fa_loading(this); router.load('#question/{{next_question_id}}');"><i class="fas fa-play-circle"></i></a> {{/if}} {{else}}
+            <div class="box_black">
+                {{{content_start_no_questions}}}
+            </div>
+            {{/if}} {{#if beacons}}
+            <div class="pulse-icon">
+                <div class="icon-wrap">
+                    <i class="icon fas fa-search-location"></i>
+                </div>
+                <div class="elements">
+                    <div class="circle circle-outer"></div>
+                    <div class="circle circle-inner"></div>
+                    <div class="pulse pulse-1"></div>
+                    <div class="pulse pulse-2"></div>
+                    <div class="pulse pulse-3"></div>
+                    <div class="pulse pulse-4"></div>
+                    <div class="pulse pulse-5"></div>
+                    <div class="pulse pulse-6"></div>
+                </div>
+            </div>
+            <ul id="events" class="mt20"></ul>
+            <ul id="beacon" class="mt20"></ul>
+            {{/if}}
+        </script>
+
+        <script id="page_tpl" type="text/x-handlebars-template">
+            <header class="bar">
+                <a class="left history_back nav" href="#"><i class="fas fa-chevron-left"></i></a>
+                <h1>{{{page.title}}}</h1>
+            </header>
+            <section class="content content_header" {{#if page.background_image}}style="background-image:url({{page.background_image}});" {{/if}}>
                 {{{page.text}}}
-                </section>
-            </script>
-            			
-			<script id="contact_tpl" type="text/x-handlebars-template">
-				<header class="bar">
-					<a class="left history_back nav" href="#"><i class="fas fa-chevron-left"></i></a>
-					<h1>{{{title}}}</h1>
-				</header>
-                <section class="content content_header" {{#if background_image}}style="background-image:url({{background_image}});"{{/if}}>
-					<form id="form_contact">
-						<div class="question_form">
-							<input type="hidden" class="input_app_id" name="app_id">		
-							<input type="hidden" class="input_app_version" name="app_version">
-							<input type="hidden" class="input_user_id" name="user_id">
-							<input type="hidden" class="input_user_token" name="user_token">
-							<input type="hidden" class="input_device_id" name="device_id">
-							<input type="hidden" class="input_device_model" name="device_model">                
-							<input type="hidden" class="input_device_platform" name="device_platform">
-							<input type="hidden" class="input_device_version" name="device_version">
-							<input type="hidden" name="cmd" value="send_contact">
+            </section>
+        </script>
 
-							{{{contact}}}
-						</div>
-					</form>
-				</section>
-				
-				<footer class="bar">
-					<label class="btn btn-secondary left history_back">Annuleren</label> 
+        <script id="contact_tpl" type="text/x-handlebars-template">
+            <header class="bar">
+                <a class="left history_back nav" href="#"><i class="fas fa-chevron-left"></i></a>
+                <h1>{{{title}}}</h1>
+            </header>
+            <section class="content content_header" {{#if background_image}}style="background-image:url({{background_image}});" {{/if}}>
+                <form id="form_contact">
+                    <div class="question_form">
+                        <input type="hidden" class="input_app_id" name="app_id">
+                        <input type="hidden" class="input_app_version" name="app_version">
+                        <input type="hidden" class="input_user_id" name="user_id">
+                        <input type="hidden" class="input_user_token" name="user_token">
+                        <input type="hidden" class="input_device_id" name="device_id">
+                        <input type="hidden" class="input_device_model" name="device_model">
+                        <input type="hidden" class="input_device_platform" name="device_platform">
+                        <input type="hidden" class="input_device_version" name="device_version">
+                        <input type="hidden" name="cmd" value="send_contact"> {{{contact}}}
+                    </div>
+                </form>
+            </section>
 
-					<a href="javascript:;" id="contact_submit" class="btn btn-primary btn-opslaan right">Versturen</a>
-				</footer>
-			</script>
-            
-            <script id="question_tpl" type="text/x-handlebars-template">
-				<div id="menu_clicker"></div>
-				<div id="leaderboard_clicker"></div>
-			
-                <section class="content content_footer template_{{template}} {{#if options.fontcolortheme}} fontcolor_{{options.fontcolortheme}} {{/if}}">
-                    <div class="question_bg" {{#if (and (ne image "" )(ne image_type "content"))}}style="background-image:url({{image}});"{{/if}}></div>
-					
-					<form id="question{{id}}" data-id="{{id}}">
-					
-						{{#if (and (ne image "")(eq image_type "content"))}}
-							<div class="question_image_content"><img src="{{image}}" class="scale"></div>
-						{{/if}}
-					
-						{{#if (or (ne template_title "" )(ne text ""))}}					
-							<div class="question_text">
-								{{#if template_title}}
-									<h1>{{template_title}}</h1>
-								{{/if}}
+            <footer class="bar">
+                <label class="btn btn-secondary left history_back">Annuleren</label>
 
-								{{{text}}}
-							</div>
-						{{/if}}
-						
-						<div class="question_form">
-							<input type="hidden" name="question_id" value="{{id}}">
+                <a href="javascript:;" id="contact_submit" class="btn btn-primary btn-opslaan right">Versturen</a>
+            </footer>
+        </script>
 
-							<input type="hidden" class="input_app_id" name="app_id">		
-							<input type="hidden" class="input_app_version" name="app_version">
-							<input type="hidden" class="input_user_id" name="user_id">
-							<input type="hidden" class="input_user_token" name="user_token">
-							<input type="hidden" class="input_device_id" name="device_id">
-							<input type="hidden" class="input_device_model" name="device_model">                
-							<input type="hidden" class="input_device_platform" name="device_platform">
-							<input type="hidden" class="input_device_version" name="device_version">
+        <script id="question_tpl" type="text/x-handlebars-template">
+            <div id="menu_clicker"></div>
+            <div id="leaderboard_clicker"></div>
 
-							<input type="hidden" name="cmd" value="question_answer">
+            <section class="content content_footer template_{{template}} {{#if options.fontcolortheme}} fontcolor_{{options.fontcolortheme}} {{/if}}">
+                <div class="question_bg" {{#if (and (ne image "" )(ne image_type "content"))}}style="background-image:url({{image}});" {{/if}}></div>
 
-							{{#if (eq template "camera")}}
-								<input type="hidden" name="answer" value="1" id="question_camera_answer">
-							{{/if}}
+                <form id="question{{id}}" data-id="{{id}}">
 
-							{{#if (eq template "page")}}
-								<input type="hidden" name="answer" value="1">          
-							{{/if}}	
-							
-							{{#if (eq template "slider")}}
-								<div class="question_slider" data-label_first="{{options.label_first}}" data-label_last="{{options.label_last}}">
-									<input type="range" min="{{options.range_start}}" max="{{options.range_end}}" value="" class="input_question_slider" id="input_question_slider" name="answer">
-								</div>
-							{{/if}}
-							
-							{{#if (eq template "star")}}
-								<fieldset class="rating star star{{options.range_end}} star_style{{options.star_style}}">
-									<input type="radio" id="rating10" name="answer" value="5" /><label for="rating10"></label>
-									<input type="radio" id="rating9" name="answer" value="4.5" /><label class="half" for="rating9"></label>
-									<input type="radio" id="rating8" name="answer" value="4" /><label for="rating8"></label>
-									<input type="radio" id="rating7" name="answer" value="3.5" /><label class="half" for="rating7"></label>
-									<input type="radio" id="rating6" name="answer" value="3" /><label for="rating6"></label>
-									<input type="radio" id="rating5" name="answer" value="2.5" /><label class="half" for="rating5"></label>
-									<input type="radio" id="rating4" name="answer" value="2" /><label for="rating4"></label>
-									<input type="radio" id="rating3" name="answer" value="1.5" /><label class="half" for="rating3"></label>
-									<input type="radio" id="rating2" name="answer" value="1" /><label for="rating2"></label>
-									<input type="radio" id="rating1" name="answer" value="0.5" /><label class="half" for="rating1"></label>
-								</fieldset>
-							{{/if}}	
-							
-							{{#if (eq template "video")}}
-								<input type="hidden" name="answer" value="1"> 
-								<div id="videoplayer{{id}}"></div>
-								
-								<div id="videoplayer_end_controls" class="animated slideIn hide">
-									<a href="javascript:;" id="question_submit" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Ga verder</a>
-								</div>
-								
-							{{/if}}	
+                    {{#if (and (ne image "")(eq image_type "content"))}}
+                    <div class="question_image_content"><img src="{{image}}" class="scale"></div>
+                    {{/if}} {{#if (or (ne template_title "" )(ne text ""))}}
+                    <div class="question_text">
+                        {{#if template_title}}
+                        <h1>{{template_title}}</h1>
+                        {{/if}} {{{text}}}
+                    </div>
+                    {{/if}}
 
-							{{#if (eq template "sortable")}} 
-								<ul class="sortable_list">
-									{{#each meta}}
-										<li id="question_item{{id}}">
-											<label class="sortable_list_label"><input type="hidden" name="answer[]" value="{{id}}"></label>
-											<div class="sortable_list_name">
-												{{#if text}}
-													<div class="li_text_toggler">
-														<i class="fas fa-caret-down show_text_down"></i>
-														<i class="fas fa-caret-up show_text_up"></i>
-													</div>
-												{{/if}}								
-												<span class="sortable_list_color sortable_list_color_{{inc @index inc=1}}">{{inc @index inc=1}}</span>
-												{{name}}
-											</div>
-											{{#if text}}
-											<div class="sortable_list_text">{{{text}}}</div>
-											{{/if}}
-										</li>
-									{{/each}}
-								</ul>
-							{{/if}}
-							
-							{{#if (eq template "dropdown")}}
-								<select {{#if options.multiple}} name="answer[]" multiple {{else}} name="answer" {{/if}}>
+                    <div class="question_form">
+                        <input type="hidden" name="question_id" value="{{id}}">
+
+                        <input type="hidden" class="input_app_id" name="app_id">
+                        <input type="hidden" class="input_app_version" name="app_version">
+                        <input type="hidden" class="input_user_id" name="user_id">
+                        <input type="hidden" class="input_user_token" name="user_token">
+                        <input type="hidden" class="input_device_id" name="device_id">
+                        <input type="hidden" class="input_device_model" name="device_model">
+                        <input type="hidden" class="input_device_platform" name="device_platform">
+                        <input type="hidden" class="input_device_version" name="device_version">
+
+                        <input type="hidden" name="cmd" value="question_answer"> {{#if (eq template "camera")}}
+                        <input type="hidden" name="answer" value="1" id="question_camera_answer"> {{/if}} {{#if (eq template "page")}}
+                        <input type="hidden" name="answer" value="1"> {{/if}} {{#if (eq template "slider")}}
+                        <div class="question_slider" data-label_first="{{options.label_first}}" data-label_last="{{options.label_last}}">
+                            <input type="range" min="{{options.range_start}}" max="{{options.range_end}}" value="" class="input_question_slider" id="input_question_slider" name="answer">
+                        </div>
+                        {{/if}} {{#if (eq template "star")}}
+                        <fieldset class="rating star star{{options.range_end}} star_style{{options.star_style}}">
+                            <input type="radio" id="rating10" name="answer" value="5" /><label for="rating10"></label>
+                            <input type="radio" id="rating9" name="answer" value="4.5" /><label class="half" for="rating9"></label>
+                            <input type="radio" id="rating8" name="answer" value="4" /><label for="rating8"></label>
+                            <input type="radio" id="rating7" name="answer" value="3.5" /><label class="half" for="rating7"></label>
+                            <input type="radio" id="rating6" name="answer" value="3" /><label for="rating6"></label>
+                            <input type="radio" id="rating5" name="answer" value="2.5" /><label class="half" for="rating5"></label>
+                            <input type="radio" id="rating4" name="answer" value="2" /><label for="rating4"></label>
+                            <input type="radio" id="rating3" name="answer" value="1.5" /><label class="half" for="rating3"></label>
+                            <input type="radio" id="rating2" name="answer" value="1" /><label for="rating2"></label>
+                            <input type="radio" id="rating1" name="answer" value="0.5" /><label class="half" for="rating1"></label>
+                        </fieldset>
+                        {{/if}} {{#if (eq template "video")}}
+                        <input type="hidden" name="answer" value="1">
+                        <div id="videoplayer{{id}}"></div>
+
+                        <div id="videoplayer_end_controls" class="animated slideIn hide">
+                            <a href="javascript:;" id="question_submit" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Ga verder</a>
+                        </div>
+
+                        {{/if}} {{#if (eq template "sortable")}}
+                        <ul class="sortable_list">
+                            {{#each meta}}
+                            <li id="question_item{{id}}">
+                                <label class="sortable_list_label"><input type="hidden" name="answer[]" value="{{id}}"></label>
+                                <div class="sortable_list_name">
+                                    {{#if text}}
+                                    <div class="li_text_toggler">
+                                        <i class="fas fa-caret-down show_text_down"></i>
+                                        <i class="fas fa-caret-up show_text_up"></i>
+                                    </div>
+                                    {{/if}}
+                                    <span class="sortable_list_color sortable_list_color_{{inc @index inc=1}}">{{inc @index inc=1}}</span> {{name}}
+                                </div>
+                                {{#if text}}
+                                <div class="sortable_list_text">{{{text}}}</div>
+                                {{/if}}
+                            </li>
+                            {{/each}}
+                        </ul>
+                        {{/if}} {{#if (eq template "dropdown")}}
+                        <select {{#if options.multiple}} name="answer[]" multiple {{else}} name="answer" {{/if}}>
 									
 									{{#unless options.multiple}}<option disabled selected value>{{#if options.placeholder}}{{options.placeholder}}{{else}}Maak een keuze{{/if}}</option>{{/unless}}
 									
@@ -404,20 +373,17 @@
 										<option value="{{id}}">{{name}}</option>
 									{{/each}}
 									
-								</select>
-							{{/if}}
-
-							{{#if (or (eq template "multipleselect")(eq template "singleselect"))}}
-								<ul class="select_list">
-									{{#each meta}}
-										<li id="question_item{{id}}">
-											{{#if text}}
-												<div class="li_text_toggler">
-													<i class="fas fa-caret-down show_text_down"></i>
-													<i class="fas fa-caret-up show_text_up"></i>
-												</div>										
-											{{/if}}
-											<label class="{{#if (eq custom_input "1")}}custom_input{{/if}} {{#if text}}has_text{{/if}}">
+								</select> {{/if}} {{#if (or (eq template "multipleselect")(eq template "singleselect"))}}
+                        <ul class="select_list">
+                            {{#each meta}}
+                            <li id="question_item{{id}}">
+                                {{#if text}}
+                                <div class="li_text_toggler">
+                                    <i class="fas fa-caret-down show_text_down"></i>
+                                    <i class="fas fa-caret-up show_text_up"></i>
+                                </div>
+                                {{/if}}
+                                <label class="{{#if (eq custom_input " 1 ")}}custom_input{{/if}} {{#if text}}has_text{{/if}}">
 											
 												{{#if (eq ../template "multipleselect")}}
 													<input type="checkbox" name="answer[]" value="{{id}}">
@@ -439,241 +405,204 @@
 													<div class="select_list_text">{{{text}}}</div>
 												{{/if}}										
 											</label>
-										</li>
-									{{/each}}
-								</ul>
-							{{/if}}							
+                            </li>
+                            {{/each}}
+                        </ul>
+                        {{/if}} {{#if (eq template "textarea")}}
+                        <label class="input_textarea"><textarea name="answer"></textarea></label> {{/if}} {{#if (eq template "fileupload")}}
+                        <input type="file" accept="{{options.accept}}" name="imageData" class="input_file hide" id="input_file_upload"> {{/if}} {{#if (eq template "videoupload")}}
+
+                        <input id="yt_video_upload_title" type="hidden" value="Titel zeggut">
+                        <input id="yt_video_upload_description" type="hidden" value="Description zeggut">
+                        <input id="yt_video_upload_privacy" type="hidden" value="private">
+
+                        <div id="yt_video_upload_during_upload" style="display:none;">
+                            <p id="yt_video_upload_text">Je video wordt geupload, een moment geduld... <span id="yt_video_upload_text_progress"></span></p>
+                            <div class="progress_bar_big"><span id="yt_video_upload_progress"></span></div>
+                        </div>
+
+                        <input type="file" name="videoFile" accept="video/*" class="input_file hide" id="input_video_upload">
+                        <input type="hidden" name="answer" value="" id="yt_video_upload_response"> {{/if}} {{#xif " this.template == 'thumbs' || this.template == 'yesno' " }} {{#each meta}}
+                        <label class="label_{{../template}} animated slideUp" id="question_item{{id}}"><input type="radio" name="answer" value="{{id}}"></label> {{/each}} {{/xif}} {{#if (eq template "picturechoice")}}
+                        <ul class="picturechoice_list">
+                            {{#each meta}}
+                            <li id="question_item{{id}}">
+                                <label class="picturechoice_list_label animated" style="background-image:url('{{image}}');"><input type="radio" name="answer" value="{{id}}"></label>
+                            </li>
+                            {{/each}}
+                        </ul>
+                        {{/if}} {{#if (eq template "result")}} {{#if (eq options.result_type 'yesno_stats')}}
+
+                        <div class="result_yesno_stats_wrapper">
+                            {{#each meta.result}}
+                            <div class="result_yesno_stats">
+                                <div class="result_yesno_stats_score">{{percent}}</div>
+                                <div class="result_yesno_stats_bar" style="height:{{percent}};"></div>
+                            </div>
+                            {{/each}}
+                        </div>
+
+                        {{else}}
+
+                        <ul class="result_list">
+                            {{#each meta.result}}
+                            <li class="result_list_item result_list_item_{{template}}" id="result_question_item{{id}}">
+                                <div class="result_list_name {{#if (gt feedback 9)}}result_correct_{{{correct}}}{{/if}} li_text_toggler">
+                                    <div class="li_text_toggler">
+                                        <i class="fas fa-caret-down show_text_down"></i>
+                                        <i class="fas fa-caret-up show_text_up"></i>
+                                    </div>
+                                    {{title}}
+                                </div>
+
+                                <div class="result_list_text">
+                                    <div class="result_text_user_answer">
+
+                                        {{{text}}}
+
+                                        <span>Je hebt geantwoord</span> {{#if (eq template 'star')}}
+                                        <fieldset class="star star{{options.range_end}} star_style{{options.star_style}} pointereventsnone">
+                                            <input type="radio" id="rating{{id}}_10" name="answer{{id}}" value="5" {{#if (eq answer 5)}}checked="checked" {{/if}} /><label for="rating{{id}}_10"></label>
+                                            <input type="radio" id="rating{{id}}_9" name="answer{{id}}" value="4.5" {{#if (eq answer 4.5)}}checked="checked" {{/if}} /><label class="half" for="rating{{id}}_9"></label>
+                                            <input type="radio" id="rating{{id}}_8" name="answer{{id}}" value="4" {{#if (eq answer 4)}}checked="checked" {{/if}}/><label for="rating{{id}}_8"></label>
+                                            <input type="radio" id="rating{{id}}_7" name="answer{{id}}" value="3.5" {{#if (eq answer 3.5)}}checked="checked" {{/if}}/><label class="half" for="rating{{id}}_7"></label>
+                                            <input type="radio" id="rating{{id}}_6" name="answer{{id}}" value="3" {{#if (eq answer 3)}}checked="checked" {{/if}}/><label for="rating{{id}}_6"></label>
+                                            <input type="radio" id="rating{{id}}_5" name="answer{{id}}" value="2.5" {{#if (eq answer 2.5)}}checked="checked" {{/if}}/><label class="half" for="rating{{id}}_5"></label>
+                                            <input type="radio" id="rating{{id}}_4" name="answer{{id}}" value="2" {{#if (eq answer 2)}}checked="checked" {{/if}}/><label for="rating{{id}}_4"></label>
+                                            <input type="radio" id="rating{{id}}_3" name="answer{{id}}" value="1.5" {{#if (eq answer 1.5)}}checked="checked" {{/if}}/><label class="half" for="rating{{id}}_3"></label>
+                                            <input type="radio" id="rating{{id}}_2" name="answer{{id}}" value="1" {{#if (eq answer 1)}}checked="checked" {{/if}}/><label for="rating{{id}}_2"></label>
+                                            <input type="radio" id="rating{{id}}_1" name="answer{{id}}" value="0.5" {{#if (eq answer 0.5)}}checked="checked" {{/if}}/><label class="half" for="rating{{id}}_1"></label>
+                                        </fieldset>
+                                        {{else}} {{#if (eq template 'slider')}}
+                                        <div class="question_slider pointereventsnone" data-label_first="{{options.label_first}}" data-label_last="{{options.label_last}}">
+                                            <input type="range" min="{{options.range_start}}" max="{{options.range_end}}" class="input_question_slider" id="input_question_slider" name="answer" value="{{{answer}}}">
+                                        </div>
+                                        {{else}}
+                                        <div>{{{answer}}}</div>
+                                        {{/if}} {{/if}}
+                                    </div>
+
+                                    {{#if correct_answer}}
+                                    <div class="result_text_correct_answer">
+                                        <span>Het juiste antwoord is</span>
+                                        <div>{{{correct_answer}}}</div>
+                                    </div>
+                                    {{/if}} {{#if feedback}}
+                                    <div class="result_text_feedback">
+                                        <span>Uitleg</span>
+                                        <div>{{{feedback_text}}}</div>
+                                    </div>
+                                    {{/if}}
+
+                                </div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                        {{/if}} {{/if}}
+
+                        <ul id="answer_feedback_html_text_wrapper">
+                            <li class="text_visible">
+                                <div class="li_text_toggler">
+                                    <i class="fas fa-caret-down show_text_down"></i>
+                                    <i class="fas fa-caret-up show_text_up"></i>
+                                </div>
+                                <div id="answer_feedback_html_text"></div>
+                            </li>
+                        </ul>
+
+                        <ul id="question_feedback_html_text_wrapper">
+                            <li class="text_visible">
+                                <div class="li_text_toggler">
+                                    <span><i class="fas fa-pen-square"></i></span>
+                                    <i class="fas fa-caret-down show_text_down"></i>
+                                    <i class="fas fa-caret-up show_text_up"></i>
+                                </div>
+                                <div id="question_feedback_html_text"></div>
+                            </li>
+                        </ul>
+
+                        {{#if button}} {{#if (eq button "pijl")}}
+                        <a href="javascript:;" id="question_submit" class="btn btn-round btn-pijl {{options.button_position}}"><i class="fas fa-play-circle"></i></a> {{else}}
+                        <a href="javascript:;" id="question_submit" class="btn btn-primary btn-opslaan {{options.button_position}}">{{button}}</a> {{/if}} {{/if}}
+
+                    </div>
+
+                    {{#if (eq template "fileupload")}}
+                    <footer class="bar">
+                        <label class="label_file btn btn-primary left" for="input_file_upload">Upload een bestand</label>
+
+                        <a href="javascript:;" id="question_submit" class="btn btn-secondary btn-opslaan right">Overslaan</a>
+                    </footer>
+                    {{/if}} {{#if (eq template "videoupload")}}
+                    <footer class="bar">
+                        <label class="label_file btn btn-primary left" for="input_video_upload">Upload een video</label>
+
+                        <button id="question_submit" class="btn btn-secondary btn-opslaan right">Overslaan</button>
+                    </footer>
+                    {{/if}}
 
 
-							{{#if (eq template "textarea")}}               
-								<label class="input_textarea"><textarea name="answer"></textarea></label>
-							{{/if}}
-							
-							
-							{{#if (eq template "fileupload")}}								
-								<input type="file" accept="{{options.accept}}" name="imageData" class="input_file hide" id="input_file_upload">				
-							{{/if}}
-							
-							{{#if (eq template "videoupload")}}	
-          
-								<input id="yt_video_upload_title" type="hidden" value="Titel zeggut">
-								<input id="yt_video_upload_description" type="hidden" value="Description zeggut">
-								<input id="yt_video_upload_privacy" type="hidden" value="private">
 
-								<div id="yt_video_upload_during_upload" style="display:none;">
-									<p id="yt_video_upload_text">Je video wordt geupload, een moment geduld... <span id="yt_video_upload_text_progress"></span></p>
-									<div class="progress_bar_big"><span id="yt_video_upload_progress"></span></div>
-								</div>
-
-								<input type="file" name="videoFile" accept="video/*" class="input_file hide" id="input_video_upload">	
-								<input type="hidden" name="answer" value="" id="yt_video_upload_response">	
-							
-							{{/if}}
+                </form>
+            </section>
 
 
-							{{#xif " this.template == 'thumbs' || this.template == 'yesno' " }}
-								{{#each meta}}
-									<label class="label_{{../template}} animated slideUp" id="question_item{{id}}"><input type="radio" name="answer" value="{{id}}"></label>
-								{{/each}}								
-							{{/xif}}
+            {{#if (eq template "camera")}}
+            <footer class="bar">
+                <button class="btn btn-primary left btn-camera-select" onclick="selectphoto()"><i class="fas fa-folder"></i> Selecteren</button>
+                <button class="btn btn-primary right btn-camera-photo" onclick="takephoto()"><i class="fas fa-camera"></i> Foto maken</button>
+            </footer>
+            {{/if}}
 
-							{{#if (eq template "picturechoice")}} 
-								<ul class="picturechoice_list">
-									{{#each meta}}
-										<li id="question_item{{id}}" >
-											<label class="picturechoice_list_label animated" style="background-image:url('{{image}}');"><input type="radio" name="answer" value="{{id}}"></label>
-										</li>
-									{{/each}}
-								</ul>
-							{{/if}}
+        </script>
 
-							
-							{{#if (eq template "result")}} 
-							
-								{{#if (eq options.result_type 'yesno_stats')}}
-								
-								<div class="result_yesno_stats_wrapper">
-									{{#each meta.result}}
-										<div class="result_yesno_stats">
-											<div class="result_yesno_stats_score">{{percent}}</div>
-											<div class="result_yesno_stats_bar" style="height:{{percent}};"></div>
-										</div>
-									{{/each}}
-								</div>
-								
-								{{else}}
-							
-								<ul class="result_list">
-									{{#each meta.result}}
-										<li class="result_list_item result_list_item_{{template}}" id="result_question_item{{id}}">
-											<div class="result_list_name {{#if (gt feedback 9)}}result_correct_{{{correct}}}{{/if}} li_text_toggler">
-												<div class="li_text_toggler">
-													<i class="fas fa-caret-down show_text_down"></i>
-													<i class="fas fa-caret-up show_text_up"></i>
-												</div>
-												{{title}}
-											</div>
-											
-											<div class="result_list_text">
-												<div class="result_text_user_answer">
-												
-													{{{text}}}
-												
-													<span>Je hebt geantwoord</span>
-												
-													{{#if (eq template 'star')}}
-														<fieldset class="star star{{options.range_end}} star_style{{options.star_style}} pointereventsnone">
-															<input type="radio" id="rating{{id}}_10" name="answer{{id}}" value="5" {{#if (eq answer 5)}}checked="checked"{{/if}} /><label for="rating{{id}}_10"></label>
-															<input type="radio" id="rating{{id}}_9" name="answer{{id}}" value="4.5" {{#if (eq answer 4.5)}}checked="checked"{{/if}} /><label class="half" for="rating{{id}}_9"></label>
-															<input type="radio" id="rating{{id}}_8" name="answer{{id}}" value="4" {{#if (eq answer 4)}}checked="checked"{{/if}}/><label for="rating{{id}}_8"></label>
-															<input type="radio" id="rating{{id}}_7" name="answer{{id}}" value="3.5" {{#if (eq answer 3.5)}}checked="checked"{{/if}}/><label class="half" for="rating{{id}}_7"></label>
-															<input type="radio" id="rating{{id}}_6" name="answer{{id}}" value="3" {{#if (eq answer 3)}}checked="checked"{{/if}}/><label for="rating{{id}}_6"></label>
-															<input type="radio" id="rating{{id}}_5" name="answer{{id}}" value="2.5" {{#if (eq answer 2.5)}}checked="checked"{{/if}}/><label class="half" for="rating{{id}}_5"></label>
-															<input type="radio" id="rating{{id}}_4" name="answer{{id}}" value="2" {{#if (eq answer 2)}}checked="checked"{{/if}}/><label for="rating{{id}}_4"></label>
-															<input type="radio" id="rating{{id}}_3" name="answer{{id}}" value="1.5" {{#if (eq answer 1.5)}}checked="checked"{{/if}}/><label class="half" for="rating{{id}}_3"></label>
-															<input type="radio" id="rating{{id}}_2" name="answer{{id}}" value="1" {{#if (eq answer 1)}}checked="checked"{{/if}}/><label for="rating{{id}}_2"></label>
-															<input type="radio" id="rating{{id}}_1" name="answer{{id}}" value="0.5" {{#if (eq answer 0.5)}}checked="checked"{{/if}}/><label class="half" for="rating{{id}}_1"></label>
-														</fieldset>
-													{{else}}
-														{{#if (eq template 'slider')}}
-															<div class="question_slider pointereventsnone" data-label_first="{{options.label_first}}" data-label_last="{{options.label_last}}">
-																<input type="range" min="{{options.range_start}}" max="{{options.range_end}}"  class="input_question_slider" id="input_question_slider" name="answer" value="{{{answer}}}">
-															</div>
-														{{else}}
-															<div>{{{answer}}}</div>														
-														{{/if}}
-													{{/if}}
-												</div>
-												
-												{{#if correct_answer}}
-												<div class="result_text_correct_answer">
-													<span>Het juiste antwoord is</span>
-													<div>{{{correct_answer}}}</div>
-												</div>
-												{{/if}}
-												
-												{{#if feedback}}
-												<div class="result_text_feedback">
-													<span>Uitleg</span>
-													<div>{{{feedback_text}}}</div>
-												</div>
-												{{/if}}
-												
-											</div>
-										</li>
-									{{/each}}
-								</ul>
-								{{/if}}
-							{{/if}}							
 
-							<ul id="answer_feedback_html_text_wrapper">
-								<li class="text_visible">
-									<div class="li_text_toggler">
-										<i class="fas fa-caret-down show_text_down"></i>
-										<i class="fas fa-caret-up show_text_up"></i>
-									</div>
-									<div id="answer_feedback_html_text"></div>
-								</li>
-							</ul>
-							
-							<ul id="question_feedback_html_text_wrapper">
-								<li class="text_visible">
-									<div class="li_text_toggler">
-										<span><i class="fas fa-pen-square"></i></span>
-										<i class="fas fa-caret-down show_text_down"></i>
-										<i class="fas fa-caret-up show_text_up"></i>
-									</div>									
-									<div id="question_feedback_html_text"></div>
-								</li>
-							</ul>							
-
-							{{#if button}}
-								{{#if (eq button "pijl")}}               									
-									<a href="javascript:;" id="question_submit" class="btn btn-round btn-pijl {{options.button_position}}"><i class="fas fa-play-circle"></i></a>		
-								{{else}}               									
-									<a href="javascript:;" id="question_submit" class="btn btn-primary btn-opslaan {{options.button_position}}">{{button}}</a>							
-								{{/if}}
-							{{/if}}
-								
-						</div>
-						
-						{{#if (eq template "fileupload")}}
-							<footer class="bar">
-								<label class="label_file btn btn-primary left" for="input_file_upload">Upload een bestand</label> 
-
-								<a href="javascript:;" id="question_submit" class="btn btn-secondary btn-opslaan right">Overslaan</a>
-							</footer>
-						{{/if}}
-						
-						
-						{{#if (eq template "videoupload")}}
-							<footer class="bar">
-								<label class="label_file btn btn-primary left" for="input_video_upload">Upload een video</label> 
-
-								<button id="question_submit" class="btn btn-secondary btn-opslaan right">Overslaan</button>
-							</footer>
-						{{/if}}
-						
-						
-						
-                    </form>					
-                </section>
-				
-
-            	{{#if (eq template "camera")}}
-	            <footer class="bar">
-					<button class="btn btn-primary left btn-camera-select" onclick="selectphoto()"><i class="fas fa-folder"></i> Selecteren</button>
-					<button class="btn btn-primary right btn-camera-photo" onclick="takephoto()"><i class="fas fa-camera"></i> Foto maken</button> 	            	
-				</footer>
-	        	{{/if}}
-
-            </script>
-                                               
-                       
-        </div><!-- app -->
+    </div>
+    <!-- app -->
 
     <script type="text/javascript">
-        if (!parent.show_app_in_browser){
+        if (!parent.show_app_in_browser) {
             document.write("<script src='cordova.js' id='script_cordova'><\/script>");
         }
     </script>
-    
-    <script type="text/javascript" src="lib/fastclick.js"></script>
- 
-    <script type="text/javascript" src="lib/jquery.js"></script>
-	<script type="text/javascript" src="lib/jquery.ui.min.js"></script>
-	<script type="text/javascript" src="lib/jquery.touch.punch.js"></script>    
 
-	<script type="text/javascript" src="lib/handlebars.js"></script> 
-		
+    <script type="text/javascript" src="lib/fastclick.js"></script>
+
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/jquery.ui.min.js"></script>
+    <script type="text/javascript" src="lib/jquery.touch.punch.js"></script>
+
+    <script type="text/javascript" src="lib/handlebars.js"></script>
+
     <script type="text/javascript" src="lib/router.js"></script>
 
-    <script type="text/javascript" src="lib/pageslider.js"></script>    
+    <script type="text/javascript" src="lib/pageslider.js"></script>
     <script type="text/javascript" src="lib/jquery.bxslider.min.js"></script>
-	
-	<script type="text/javascript" src="lib/message.js"></script>
-    
-   <!-- <script type="text/javascript" src="lib/jquery.touchswipe.min.js"></script>-->
-    
-    <script type="text/javascript" src="lib/video_upload.js"></script>		
-	
-	
+
+    <script type="text/javascript" src="lib/message.js"></script>
+
+    <!-- <script type="text/javascript" src="lib/jquery.touchswipe.min.js"></script>-->
+
+    <script type="text/javascript" src="lib/video_upload.js"></script>
+
+
     <script type="text/javascript" src="js/nprogress.js"></script>
-      
+
     <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript" src="js/handlebars_helper.js"></script>
-	
+
 
     <script type="text/javascript" src="js/loginview.js"></script>
-    <script type="text/javascript" src="js/home_page_intro_contactview.js"></script>	
+    <script type="text/javascript" src="js/home_page_intro_contactview.js"></script>
     <script type="text/javascript" src="js/questionview.js"></script>
-	
-    <script type="text/javascript" src="js/push_init.js"></script> 	
-    <script type="text/javascript" src="js/mobiledetect.js"></script> 
 
-	<script type="text/javascript" src="js/beacon.js?v=052019"></script>
-	
+    <script type="text/javascript" src="js/push_init.js"></script>
+    <script type="text/javascript" src="js/mobiledetect.js"></script>
+
+    <script type="text/javascript" src="js/beacon.js?v=052019"></script>
+
     <script type="text/javascript" src="js/app.js?v=052019"></script>
     <script type="text/javascript" src="js/index.js?v=052019"></script>
 </body>
+
 </html>
