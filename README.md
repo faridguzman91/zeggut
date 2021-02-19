@@ -76,7 +76,7 @@ daarna <code>$ brew install wget</code><br>
 
 <br>
 <br>
-Om de app naar de Simulator te deployen, open je met de terminal de workspace <code>$ open ./platforms/ios/HelloWorld.xcworkspace/</code>
+Om de app naar de Simulator te deployen, open je met de terminal de workspace <code>$ open ./platforms/ios/[appnaam].xcworkspace/</code>
 selecteer in XCode de simulator links boven de druk op Play.
 
 
