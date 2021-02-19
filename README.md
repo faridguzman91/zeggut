@@ -11,7 +11,7 @@ cordova-plugin-wkwebview-engine ook naar latest (op het moment van schrijven 2.2
 ## Installatie
 Ga in een terminal naar de map waar het project staat en draai `npm install` om de depenencies te installeren.
 
-*Update: Eerst <code>npm install -g cordova</code> intypen, en zorg daar na dat je PowerShell/Terminal privileges in orde zijn.
+<strong>*Update:</strong> Eerst <code>npm install -g cordova</code> intypen, en zorg daar na dat je PowerShell/Terminal privileges in orde zijn.
 Open een terminal met beheerdersrechten en typ in:
 
 <code>Get-ExecutionPolicy -List </code>                                 // Beleid geset voor de user
