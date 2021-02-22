@@ -55,7 +55,7 @@ Open de <strong>app</strong> folder in Android Studio als nieuw project en open 
 <br> Als de build niet succesvol is, check in file>settings>appearance & behavior>android sdk en check of je alle google sdk's hebt hebt gecheckt en gedownload hebt.
 (zie stackoverflow)
 
-*Om de gradle - sdk versies te overridern typ in android studio <code>cordova run android -- --gradleArg=-PcdvMinSdkVersion=20</code> . dit i.v.m. het minimale android sdk versie in de manifest te overriden. wat ik doe is de <code>  <uses-sdk android:minSdkVersion="22" /></code> te declareren in de AndroidManifest.xml.
+*Om de gradle - sdk versies te overridern typ in android studio <code>cordova run android -- --gradleArg=-PcdvMinSdkVersion=20</code> . dit i.v.m. het minimale android sdk versie in de manifest te overriden. wat ik doe is de <code><uses-sdk android:minSdkVersion="22"></code> te declareren in de AndroidManifest.xml.
 
 Om te testen stel je AVD manager in, en test als nodig is op de vroegste versie uit (Android Nougat).
 
