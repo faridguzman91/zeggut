@@ -1,0 +1,168 @@
+#menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow-y: auto;
+	margin: 0;
+	list-style: none;
+	background-color: #111;
+	z-index: 10;
+	width: 19rem;
+	height: 100%;
+	transform: translate3d( -19rem, 0, 0 );
+	-webkit-transform: translate3d( -19rem, 0, 0 );
+}
+#menu header{
+	background-color: #111;	
+	border-color:#333;
+}
+#menu footer{
+	padding:0.2rem 1rem;
+	font-size:1rem;
+	position:absolute;
+	bottom:0;
+	color:#8C8C8C;
+}
+
+#menu header h1{
+	width:auto;
+	padding: 0 2rem;
+	color: #f1f1f1;
+}
+#menu ul{
+	/*margin-top:4.4rem;*/
+}
+#menu li a {
+	background-color: #333;
+	display: block;
+	color: #fff;
+	text-align: left;
+	padding: 1rem;
+	border-bottom: 1px solid rgba( 255, 255, 255, 0.05 );
+	-webkit-transition: background 150ms ease-in;
+	transition: background 150ms ease-in;
+}
+#menu li a:hover {
+	text-decoration:none;
+	background-color: #444;
+}
+#app, #menu {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-perspective: 1000;
+}
+
+
+
+
+
+
+/************************************************************ Menu toggle styles */
+#toggle-menu {
+	position: absolute;
+	float: left;
+	display: block;
+	width: 2.7rem;
+	height: 2.0rem;
+	margin:1.35rem 0 0 1rem;
+	cursor: pointer;	
+}
+
+#toggle-menu span:after,
+#toggle-menu span:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: -0.8rem;
+}
+#toggle-menu span:after{
+	top: 0.8rem;
+}
+#toggle-menu span {
+	margin-top: 0.8rem;
+	position: relative;
+	display: block;
+}
+
+#toggle-menu span,
+#toggle-menu span:after,
+#toggle-menu span:before {
+	width: 100%;
+	height: 0.2rem;
+	background-color: #0099ff;
+	-webkit-transition: all 0.3s;	
+	transition: all 0.3s;
+	backface-visibility: hidden;
+	border-radius: 2px;
+}
+
+#toggle-menu:hover span, #toggle-menu:focus span, 
+#toggle-menu:hover span:after, #toggle-menu:focus span:after,
+#toggle-menu:hover span:before, #toggle-menu:focus span:before {
+	background-color:#0072be;
+}
+
+body.menu-visible #toggle-menu span,
+body.menu-visible #toggle-menu span:after,
+body.menu-visible #toggle-menu span:before{
+	background-color:#0099ff;	
+}
+
+body.menu-visible #toggle-menu:hover span:after, body.menu-visible #toggle-menu:focus span:after,
+body.menu-visible #toggle-menu:hover span:before, body.menu-visible #toggle-menu:focus span:before{
+	background-color:#0072be;	
+}
+
+body.menu-visible #toggle-menu span, body.menu-visible #toggle-menu:hover span, body.menu-visible #toggle-menu:focus span {
+	background-color: transparent;
+}
+body.menu-visible #toggle-menu span:before {
+	transform: rotate(45deg) translate(0.6rem, 0.6rem);
+}
+body.menu-visible #toggle-menu span:after {
+	transform: rotate(-45deg) translate(0.6rem, -0.5rem);
+}
+body.menu-visible #toggle-menu + #menu {
+	opacity: 1;
+	visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.animating #app, .animating #menu {
+	transition: transform .35s ease-in-out;
+	-webkit-transition: -webkit-transform .35s ease-in-out;
+}
+.animating.slideleft #menu {
+	transform: translate3d( 0, 0, 0 );
+	-webkit-transform: translate3d( 0, 0, 0 );
+}
+.animating.slideleft #app {
+	transform: translate3d( 19rem, 0, 0 );
+	-webkit-transform: translate3d( 19rem, 0, 0 );
+}
+.animating.slideright #app {
+	transform: translate3d( 0, 0, 0 );
+	-webkit-transform: translate3d( 0, 0, 0 );
+}
+.animating.slideright #menu {
+	transform: translate3d( -19rem, 0, 0 );
+	-webkit-transform: translate3d( -19rem, 0, 0 );
+}
+.menu-visible #menu {
+	transform: translate3d( 0px, 0, 0 );
+	-webkit-transform: translate3d( 0px, 0, 0 );
+}
+.menu-visible #app {
+	transform: translate3d( 19rem, 0, 0 );
+	-webkit-transform: translate3d( 19rem, 0, 0 );
+}
