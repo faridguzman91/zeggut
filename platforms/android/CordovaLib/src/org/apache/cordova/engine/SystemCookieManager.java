@@ -19,8 +19,6 @@
 
 package org.apache.cordova.engine;
 
-import android.annotation.TargetApi;
-import android.os.Build;
 import android.webkit.CookieManager;
 import android.webkit.WebView;
 

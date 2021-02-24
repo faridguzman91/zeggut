@@ -18,12 +18,12 @@
 */
 package org.apache.cordova;
 
+import android.annotation.SuppressLint;
+import android.webkit.ClientCertRequest;
+
 import java.security.Principal;
 import java.security.PrivateKey;
 import java.security.cert.X509Certificate;
-
-import android.annotation.SuppressLint;
-import android.webkit.ClientCertRequest;
 
 /**
  * Implementation of the ICordovaClientCertRequest for Android WebView.

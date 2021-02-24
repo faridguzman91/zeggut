@@ -18,10 +18,7 @@
   under the License.
 -->
 
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:rim="http://www.blackberry.com/ns/widgets"
-    id="cordova-plugin-camera-tests"
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-camera-tests"
     version="4.0.3">
     <name>Cordova Camera Plugin Tests</name>
     <license>Apache 2.0</license>

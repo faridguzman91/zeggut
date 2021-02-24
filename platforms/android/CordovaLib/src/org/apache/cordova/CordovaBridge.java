@@ -20,10 +20,10 @@ package org.apache.cordova;
 
 import android.annotation.SuppressLint;
 
-import java.security.SecureRandom;
-
 import org.json.JSONArray;
 import org.json.JSONException;
+
+import java.security.SecureRandom;
 
 /**
  * Contains APIs that the JS can call. All functions in here should also have

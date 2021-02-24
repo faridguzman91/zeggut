@@ -29,10 +29,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.ArrayList;
 import java.util.List;
 
 import me.leolin.shortcutbadger.ShortcutBadger;

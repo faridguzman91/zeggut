@@ -1,14 +1,12 @@
 package hu.dpal.phonegap.plugins;
 
-import org.apache.cordova.CallbackContext;
-import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.CordovaWebView;
-import org.json.JSONArray;
-import org.json.JSONException;
-
 import android.content.Context;
 import android.provider.Settings.Secure;
-import android.util.Log;
+
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
+import org.json.JSONArray;
+import org.json.JSONException;
 
 import java.io.File;
 import java.io.FileOutputStream;

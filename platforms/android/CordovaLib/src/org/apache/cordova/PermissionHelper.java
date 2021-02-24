@@ -18,11 +18,11 @@
 */
 package org.apache.cordova;
 
-import java.util.Arrays;
+import android.content.pm.PackageManager;
 
 import org.json.JSONException;
 
-import android.content.pm.PackageManager;
+import java.util.Arrays;
 
 /**
  * This class provides reflective methods for permission requesting and checking so that plugins

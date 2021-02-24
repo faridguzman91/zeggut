@@ -111,20 +111,22 @@
           ],
           "/manifest": [
             {
-              "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-              "count": 1
+              "xml": "<uses-sdk tools:overrideLibrary=\"org.apache.cordova\" />",
+              "count": 5
             },
             {
-              "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-              "count": 1
-            },
-            {
-              "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
-              "count": 1
-            },
-            {
-              "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
-              "count": 1
+              "xml": "<manifest xmlns:tools=\"http://schemas.android.com/tools\" />",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml",
+              "oldAttrib": {
+                "android:hardwareAccelerated": "true",
+                "android:versionCode": "18000",
+                "android:versionName": "1.8.0",
+                "package": "nl.zeggut.app",
+                "xmlns:android": "http://schemas.android.com/apk/res/android",
+                "xmlns:tools": "http://schemas.android.com/tools"
+              }
             }
           ],
           "/manifest/application": [

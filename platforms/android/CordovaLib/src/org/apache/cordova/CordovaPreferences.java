@@ -19,14 +19,11 @@
 
 package org.apache.cordova;
 
+import android.os.Bundle;
+
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
-
-import org.apache.cordova.LOG;
-
-import android.app.Activity;
-import android.os.Bundle;
 
 public class CordovaPreferences {
     private HashMap<String, String> prefs = new HashMap<String, String>(20);

@@ -18,12 +18,12 @@
 */
 package org.apache.cordova;
 
-import java.util.List;
+import android.util.Base64;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import android.util.Base64;
+import java.util.List;
 
 public class PluginResult {
     private final int status;

@@ -21,15 +21,13 @@
 
 package cordova.plugins.screenorientation;
 
-import org.apache.cordova.CallbackContext;
-import org.apache.cordova.CordovaPlugin;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.util.Log;
+
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaPlugin;
+import org.json.JSONArray;
 
 public class CDVOrientation extends CordovaPlugin {
     

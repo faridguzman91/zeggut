@@ -18,6 +18,23 @@
 */
 package org.apache.cordova.filetransfer;
 
+import android.net.Uri;
+import android.os.Build;
+import android.util.Log;
+
+import com.amazon.android.webkit.AmazonCookieManager;
+
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.Config;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CordovaResourceApi;
+import org.apache.cordova.CordovaResourceApi.OpenForReadResult;
+import org.apache.cordova.PluginResult;
+import org.apache.cordova.file.FileUtils;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.Closeable;
@@ -46,22 +63,6 @@ import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
-
-import org.apache.cordova.Config;
-import org.apache.cordova.CallbackContext;
-import org.apache.cordova.CordovaPlugin;
-import org.apache.cordova.CordovaResourceApi;
-import org.apache.cordova.CordovaResourceApi.OpenForReadResult;
-import org.apache.cordova.PluginResult;
-import org.apache.cordova.file.FileUtils;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import android.net.Uri;
-import android.os.Build;
-import android.util.Log;
-import com.amazon.android.webkit.AmazonCookieManager;
 
 public class FileTransfer extends CordovaPlugin {
 

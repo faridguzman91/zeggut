@@ -2,8 +2,8 @@
 var app;
 
 var app_latest_version, //overruled in app.js 
-	app_version = 178;
-var app_version_display = 'v1.7.8';
+	app_version = 180;
+var app_version_display = 'v1.8.0';
 var app_options;
 var app_beacons;
 var app_in_background=false;

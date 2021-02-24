@@ -19,21 +19,16 @@
 package org.apache.cordova.file.test;
 
 import android.content.ContentProvider;
-import android.net.Uri;
-import android.content.res.AssetFileDescriptor;
-import android.content.res.AssetManager;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.ParcelFileDescriptor;
 
 import org.apache.cordova.CordovaResourceApi;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.HashMap;
 
 public class TestContentProvider extends ContentProvider {
 

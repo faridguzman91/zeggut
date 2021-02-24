@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="17008" id="nl.zeggut.app" version="1.7.8" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget android-versionCode="18000" id="nl.zeggut.app" version="1.8.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Zeggut</name>
-    <description>Zeggut v1.7.8</description>
+    <description>Zeggut v1.8.0</description>
     <author email="apps@creapolis.nl" href="https://creapolis.nl">Creapolis Media</author>
     <content src="index.html" />
     <access origin="*" />
@@ -34,6 +34,8 @@
         <variable name="CAMERA_USAGE_DESCRIPTION" value="Zeggut would like to access the camera, to take (or select) a photo when this is a question." />
         <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="Zeggut would like to access the camera, to take (or select) a photo when this is a question." />
     </plugin>
+
+
     <edit-config file="*-Info.plist" mode="overwrite" platform="ios" target="NSCameraUsageDescription">
         <string>Zeggut would like to access the camera, to take (or select) a photo when this is a question.</string>
     </edit-config>

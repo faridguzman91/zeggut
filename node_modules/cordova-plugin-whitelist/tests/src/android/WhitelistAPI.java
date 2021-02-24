@@ -18,16 +18,15 @@
 */
 package org.apache.cordova.test;
 
-import org.apache.cordova.Whitelist;
-import org.apache.cordova.Config;
-
 import org.apache.cordova.CallbackContext;
+import org.apache.cordova.Config;
 import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.PluginManager;
 import org.apache.cordova.PluginResult;
+import org.apache.cordova.Whitelist;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import org.apache.cordova.PluginManager;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
