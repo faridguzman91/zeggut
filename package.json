@@ -59,5 +59,7 @@
       "android"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "bundletool": "^1.1.3"
+  }
 }
