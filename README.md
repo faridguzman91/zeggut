@@ -73,18 +73,17 @@ om de apk's te builden gebruik je in android terminal <br>
 om de releasemode .apk te creeren, voeg je signing properties in de build.gradle toe 
 bijvoorbeeld:
 <br>
-<code> 
-org.gradle.daemon=true<br>
-org.gradle.jvmargs=-Xmx2048m<br>
-android.useAndroidX=false<br>
-android.enableJetifier=false<br>
-cdvMinSdkVersion=19<br>
-cdvTargetSdkVersion=28<br>
-storeFile=app/zeggut_keystore/zeggutdemo.keystore<br>
-storePassword=z3ggut2021<br>
-storeType=pkcs12<br>
-keyAlias=zeggutdemoalias<br>
-keyPassword=z3ggut2021<br>
+<code>org.gradle.daemon=true</code><br>
+<code>org.gradle.jvmargs=-Xmx2048m</code><br>
+<code>android.useAndroidX=false</code><br>
+<code>android.enableJetifier=false</code><br>
+<code>cdvMinSdkVersion=19</code><br>
+<code>cdvTargetSdkVersion=28</code><br>
+<code>storeFile=app/zeggut_keystore/zeggutdemo.keystore</code><br>
+<code>storePassword=z3ggut2021</code><br>
+<code>storeType=pkcs12</code><br>
+<code>keyAlias=zeggutdemoalias</code><br>
+<code>keyPassword=z3ggut2021</code><br>
 </code>
 
 en dan in de terminal
