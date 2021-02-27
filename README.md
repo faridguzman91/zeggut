@@ -70,7 +70,7 @@ om de apk's te builden gebruik je in android terminal <br>
 
 <code>cordova build android -- --gradleArg=-PcdvBuildMultipleApks</code> (dit is voor een debug modus .apk)
 
-om de releasemode .apk te creeren, voeg je signing properties in de build.gradle toe 
+om de releasemode .apk te creeren, voeg je signing properties in de <strong>build.gradle</strong> toe 
 bijvoorbeeld:
 <br>
 <code>org.gradle.daemon=true</code><br>
