@@ -69,7 +69,24 @@ om de apk's te builden gebruik je in android terminal <code>cordova build androi
 om de apk's te builden gebruik je in android terminal <br>
 <code>cordova build android -- --gradleArg=-PcdvBuildMultipleApks</code> 
 
-om de releasemode apk te creeren, voeg je signing properties in de build.gradle toe 
+om de releasemode .apk te creeren, voeg je signing properties in de build.gradle toe 
+bijvoorbeeld:
+<br>
+<code> 
+org.gradle.daemon=true
+org.gradle.jvmargs=-Xmx2048m
+android.useAndroidX=false
+android.enableJetifier=false
+cdvMinSdkVersion=19
+cdvTargetSdkVersion=28
+storeFile=app/zeggut_keystore/zeggutdemo.keystore
+storePassword=z3ggut2021
+storeType=pkcs12
+keyAlias=zeggutdemoalias
+keyPassword=z3ggut2021
+</code>
+
+en dan in de terminal
 
 <code>cordova build android --release </code>
 
