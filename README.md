@@ -61,7 +61,7 @@ Om te testen stel je AVD manager in, en test als nodig is op de vroegste versie 
 
 de <code>gradle.properties</code> in je <code>zeggut/platform/android</code> folder heeft een property <code>cdvMinSdkVersion</code>, deze moet dus naar latest (22)
 <br>
-om de apk's te builden gebruik je in android terminal <code>cordova build android -- --gradleArg=-PcdvBuildMultipleApks</code> (geen idee waarvoor die '-P' voor staat maar dit werkt)
+om de apk's te builden gebruik je in android terminal <code>cordova build android -- --gradleArg=-PcdvBuildMultipleApks</code> ( '-P' voor 'property')
 <br>
 
 <strong> APK Builds </strong>
