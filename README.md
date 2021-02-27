@@ -64,11 +64,15 @@ de <code>gradle.properties</code> in je <code>zeggut/platform/android</code> fol
 om de apk's te builden gebruik je in android terminal <code>cordova build android -- --gradleArg=-PcdvBuildMultipleApks</code> (geen idee waarvoor die '-P' voor staat maar dit werkt)
 <br>
 
-<em>unsigned , signed en debug </em> .apk  files staan in <code>E:\app\platforms\android\app\build\outputs\apk\</code>
+<em>unsigned , signed en debug </em>  <code> E:\app\platforms\android\app\build\outputs\apk </code>
 =======
 om de apk's te builden gebruik je in android terminal <br>
 <code>cordova build android -- --gradleArg=-PcdvBuildMultipleApks</code> 
-(geen idee waarvoor die '-P' voor staat maar dit werkt)
+
+om de releasemode apk te creeren, voeg je signing properties in de build.gradle toe 
+
+<code>cordova build android --release </code>
+
 
 /***********************************************************************************************************************/
 
