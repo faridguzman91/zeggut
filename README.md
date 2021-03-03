@@ -64,6 +64,24 @@ de <code>gradle.properties</code> in je <code>zeggut/platform/android</code> fol
 om de apk's te builden gebruik je in android terminal <code>cordova build android -- --gradleArg=-PcdvBuildMultipleApks</code> ( '-P' voor 'property')
 <br>
 
+<strong> APK's signen </strong>
+Om apk's succesvol te signen moet je zorgen dat <code>keytool</code> in je <code>PATH</code> variables zit, die zit standaard in je bin folder van je Java SDK installatie dir. <code> C:/Program Files/Java/<latest versie>/bin </code>
+ 
+ met keytool kun je een certificaat en keystore maken voor de app met: <br>
+ 
+ <code> keytool -genkey -v -keystore my-release-key.keystore -keyalg RSA -keysize 2048 -validity 10000 -alias my-alias </code> <br>
+ //-validity is hoe lang deze cert geldig is (nu is het 10.000 jaar)
+ //-keyalg is het soort key die je kan gebruiken, RSA is volgens mij default android , DSA werkt niet zo goed met deze package type.
+ 
+ vul in je gegevens en wachtwoord, dan wordt dit certificaat opgeslagen in je root.
+ <br> 
+ move deze .keystore file in app/platforms/android en voeg deze line in je terminal toe <br>
+ 
+ <code> cordova run android --release -- --keystore=E:/app/platforms/android/<zeggut>.keystore --storePassword=<z3ggutp@ssw0rd> --alias=<zeggutalias> --password=<z3ggutp@ssw0rd> --packageType=apk 
+ </code>
+ 
+ in <code> E:\app\platforms\android\app\build\outputs\apk\release </code> staat nu je released en gesigneerde apk.
+
 <strong> APK Builds </strong>
 
 om de apk's te builden gebruik je in android terminal <br>
