@@ -113,13 +113,13 @@ en dan in de terminal
 
 <strong>Opletten</strong>: je minimale sdk en api target moeten minimaal 29 zijn, check in config.xml of dat goed staat:
 
-  <code> <preference name="android-targetSdkVersion" value="29" /> </code> <br>
-       <code> <resource-file src="google-services.json" target="app/google-services.json" /></code> <br>
-       <code> <allow-intent href="market:*" /> </code> <br>
-       <code> <preference name="android-build-tool" value="gradle" /> </code> <br>
-        <code><preference name="android-minSdkVersion" value="22" /> </code> <br>
-        <code><preference name="android-installLocation" value="auto" /></code> <br>
-        <code> <preference name="android-targetSdkVersion" value="29" /> </code> <br>
+  <preference name="android-targetSdkVersion" value="29" />  <br>
+       <resource-file src="google-services.json" target="app/google-services.json" /> <br>
+        <allow-intent href="market:*" /> <br>
+        <preference name="android-build-tool" value="gradle" />  <br>
+        <preference name="android-minSdkVersion" value="22" />  <br>
+        <preference name="android-installLocation" value="auto" /> <br>
+        <preference name="android-targetSdkVersion" value="29" />  <br>
 
 
 /***********************************************************************************************************************/
