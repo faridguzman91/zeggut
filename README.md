@@ -111,7 +111,7 @@ en dan in de terminal
 <code>cordova build android --release </code>
 <br>
 
-<strong>Opletten</strong>: je minimale sdk en api target moeten minimaal 29 zijn, check in config.xml of dat goed staat:
+<strong>Opletten</strong>: je minimale sdk en api target moeten minimaal <strong>29</strong> zijn, check in <code>config.xml</code> of dat goed staat:
 <img src="https://github.com/faridguzman91/zeggut/blob/main/api.jpg" >
 
 /***********************************************************************************************************************/
