@@ -112,14 +112,7 @@ en dan in de terminal
 <br>
 
 <strong>Opletten</strong>: je minimale sdk en api target moeten minimaal 29 zijn, check in config.xml of dat goed staat:
-
-  preference name="android-targetSdkVersion" value="29"  <br>
-    resource-file src="google-services.json" target="app/google-services.json"  <br>
-        allow-intent href="market:*"  <br>
-        preference name="android-build-tool" value="gradle"  <br>
-        preference name="android-minSdkVersion" value="22"   <br>
-        preference name="android-installLocation" value="auto"  <br>
-        preference name="android-targetSdkVersion" value="29"   <br>
+<img src="https://github.com/faridguzman91/zeggut/blob/main/api.jpg" >
 
 /***********************************************************************************************************************/
 
