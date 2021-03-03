@@ -64,12 +64,13 @@
         <variable name="SENDER_ID" value="1:1010592068648:android:6cff0a7d8ce6fed8" />
     </plugin>
     <platform name="android">
+        <preference name="android-targetSdkVersion" value="29" />
         <resource-file src="google-services.json" target="app/google-services.json" />
         <allow-intent href="market:*" />
         <preference name="android-build-tool" value="gradle" />
-        <preference name="android-minSdkVersion" value="19" />
+        <preference name="android-minSdkVersion" value="22" />
         <preference name="android-installLocation" value="auto" />
-        <preference name="android-targetSdkVersion" value="28" />
+        <preference name="android-targetSdkVersion" value="29" />
         <icon density="ldpi" src="www/res/icon/android/ldpi.png" />
         <icon density="mdpi" src="www/res/icon/android/mdpi.png" />
         <icon density="hdpi" src="www/res/icon/android/hdpi.png" />
