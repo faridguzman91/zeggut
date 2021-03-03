@@ -65,6 +65,7 @@ om de apk's te builden gebruik je in android terminal <code>cordova build androi
 <br>
 
 <strong> APK's signen </strong>
+<br>
 Om apk's succesvol te signen moet je zorgen dat <code>keytool</code> in je <code>PATH</code> variables zit, die zit standaard in je bin folder van je Java SDK installatie dir. <code> C:/Program Files/Java/<latest versie>/bin </code>
  
  met keytool kun je een certificaat en keystore maken voor de app met: <br>
