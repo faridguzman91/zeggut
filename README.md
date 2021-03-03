@@ -66,7 +66,7 @@ om de apk's te builden gebruik je in android terminal <code>cordova build androi
 
 <strong> APK's signen </strong>
 <br>
-Om apk's succesvol te signen moet je zorgen dat <code>keytool</code> in je <code>PATH</code> variables zit, die zit standaard in je bin folder van je Java SDK installatie dir. <code> C:/Program Files/Java/<latest versie>/bin </code>
+Om apk's succesvol te signen moet je zorgen dat <code>keytool</code> in je <code>PATH</code> variables zit, die zit standaard in je bin folder van je Java SDK installatie dir. <code> C:/Program Files/Java/[latest versie]/bin </code>
  
  met keytool kun je een certificaat en keystore maken voor de app met: <br>
  
@@ -79,7 +79,7 @@ Om apk's succesvol te signen moet je zorgen dat <code>keytool</code> in je <code
  <br> 
  move deze .keystore file in app/platforms/android en voeg deze line in je terminal toe <br>
  
- <code> cordova run android --release -- --keystore=E:/app/platforms/android/zeggut.keystore --storePassword=<z3ggutp@ssw0rd> --alias=<zeggutalias> --password=<z3ggutp@ssw0rd> --packageType=apk 
+ <code> cordova run android --release -- --keystore=E:/app/platforms/android/[zeggut].keystore --storePassword=[z3ggutp@ssw0rd] --alias=[zeggutalias] --password=[z3ggutp@ssw0rd] --packageType=apk 
  </code>
  
  in <code> E:\app\platforms\android\app\build\outputs\apk\release </code> staat nu je released en gesigneerde apk.
