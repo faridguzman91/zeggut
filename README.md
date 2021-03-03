@@ -72,6 +72,7 @@ Om apk's succesvol te signen moet je zorgen dat <code>keytool</code> in je <code
  
  <code> keytool -genkey -v -keystore my-release-key.keystore -keyalg RSA -keysize 2048 -validity 10000 -alias my-alias </code> <br>
  //-validity is hoe lang deze cert geldig is (nu is het 10.000 jaar)
+ <br>
  //-keyalg is het soort key die je kan gebruiken, RSA is volgens mij default android , DSA werkt niet zo goed met deze package type.
  
  vul in je gegevens en wachtwoord, dan wordt dit certificaat opgeslagen in je root.
