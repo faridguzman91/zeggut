@@ -136,7 +136,11 @@ daarna <code>$ brew install wget</code><br>
 <br>
 <br>
 Om de app naar de Simulator te deployen, open je met de terminal de workspace <code>$ open ./platforms/ios/[appnaam].xcworkspace/</code>
-selecteer in XCode de simulator links boven de druk op Play.
+selecteer in XCode de simulator links boven de druk op Play, of typ in de terminal <code>cordova build ios </code>
+<br>
+<strong>plugins</strong>
+<br>
+blijkbaar is de plugin <code>cordova-plugin-file-transfer</code> since 2017 al deprecated en veroorzaakt build errors. deze upgraden of helemaal removen uit de build.
 
 
 
