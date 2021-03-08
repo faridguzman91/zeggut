@@ -148,16 +148,3 @@ blijkbaar is de plugin <code>cordova-plugin-file-transfer</code> since 2017 al d
 
 
 
-
-
-
-## Builden
-Voeg een platform toe door `cordova add platform ios` of `cordova add platform android` te draaien. De CLI gaat nu de code voor dat platform bijvoegen. Daar daarna `cordova build ios` of `cordova build android` om de applicatie te bouwen.
-
-## Emuleren
-Om de app lokaal te testen kun je `cordova emulate ios` of `cordova emulate android` draaien.
-
-### MacOS
-Om de app te builden op MacOS heb je een volledige installatie van XCode nodig, deze installeer je in de app store. Na het installeren dien je de command line tools waar standaard een verwijzing naar staat om te zetten naar de volledige installatie, dit doe je met de command `sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer`. Daarna kun je builden met 
-# zeggut 
-
