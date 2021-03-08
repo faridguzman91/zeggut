@@ -134,6 +134,7 @@ daarna <code>$ brew install wget</code><br>
 *Installeer hierna CocoaPods om te kunnen builden <code>$ sudo gem install cocoapods</code>
 
 <br>
+De app properties en build settings moeten een iOS versie van 9.0 of hoger hebben,  Firebase versie etc. moeten ook compatible zijn met de huidige versies. Check in je build settings in xcode of dit goed staat. anders krijg je een warning.
 <br>
 Om de app naar de Simulator te deployen, open je met de terminal de workspace <code>$ open ./platforms/ios/[appnaam].xcworkspace/</code>
 selecteer in XCode de simulator links boven de druk op Play, of typ in de terminal <code>cordova build ios </code>
