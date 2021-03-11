@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="17008" id="nl.zeggut.app" version="1.7.8" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget android-versionCode="18000" id="nl.zeggut.app" version="1.8.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Zeggut</name>
-    <description>Zeggut v1.7.8</description>
+    <description>Zeggut v1.8.0</description>
     <author email="apps@creapolis.nl" href="https://creapolis.nl">Creapolis Media</author>
     <content src="index.html" />
     <access origin="*" />
@@ -46,7 +46,6 @@
     <edit-config file="*-Info.plist" mode="overwrite" platform="ios" target="NSBluetoothAlwaysUsageDescription">
         <string>This app requires Bluetooth to connect to our beacons when this is enabled in the access code you are using.</string>
     </edit-config>
-    <plugin name="cordova-plugin-file-transfer" spec="1.7.1" />
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-device" spec="2.0.2" />
     <plugin name="cordova-plugin-dialogs" spec="2.0.1" />

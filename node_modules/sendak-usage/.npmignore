@@ -1,0 +1,7 @@
+datastore.json
+node_modules
+npm-debug.log
+.DS_Store
+*.swo
+*.swp
+swap.2gb

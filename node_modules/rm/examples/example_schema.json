@@ -1,0 +1,13 @@
+{
+  "Automobile":
+   { "name": { "isa": "string", "defined": true, "distinct": true },
+     "hasone": [ "manufacturer" ] },
+     "hasmany": [ "repair", "part" ] },
+
+  "Manufacturer":
+      { "isa": "string",
+        "defined": true,
+        "distinct": true,
+        "verified": "RESERVED" },
+     "hasmany": [ "automobile", "model" ] }
+}

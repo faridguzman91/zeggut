@@ -19,6 +19,9 @@
     "cordova-plugin-dialogs": {
       "PACKAGE_NAME": "nl.zeggut.app"
     },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "nl.zeggut.app"
+    },
     "cordova-plugin-file-transfer": {
       "PACKAGE_NAME": "nl.zeggut.app"
     },
@@ -37,13 +40,15 @@
     "cordova-unique-device-id": {
       "PACKAGE_NAME": "nl.zeggut.app"
     },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "nl.zeggut.app"
+    },
+    "phonegap-plugin-multidex": {
+      "PACKAGE_NAME": "nl.zeggut.app"
+    },
     "phonegap-plugin-push": {
       "PACKAGE_NAME": "nl.zeggut.app"
     }
   },
-  "dependent_plugins": {
-    "cordova-plugin-file": {
-      "PACKAGE_NAME": "nl.zeggut.app"
-    }
-  }
+  "dependent_plugins": {}
 }

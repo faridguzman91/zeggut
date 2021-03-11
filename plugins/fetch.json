@@ -18,20 +18,12 @@
       "PHOTOLIBRARY_USAGE_DESCRIPTION": "Zeggut would like to access the camera, to take (or select) a photo when this is a question."
     }
   },
-  "cordova-plugin-file-transfer": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-file-transfer@1.7.1"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-file": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-file@>=5.0.0"
+      "id": "cordova-plugin-file@6.0.2"
     },
-    "is_top_level": false,
+    "is_top_level": true,
     "variables": {}
   },
   "cordova-plugin-splashscreen": {
@@ -88,14 +80,12 @@
       "id": "phonegap-plugin-push@2.3.0"
     },
     "is_top_level": true,
-    "variables": {
-      "SENDER_ID": "1:1010592068648:android:6cff0a7d8ce6fed8"
-    }
+    "variables": {}
   },
   "cordova-plugin-inappbrowser": {
     "source": {
       "type": "registry",
-      "id": "git+https://github.com/apache/cordova-plugin-inappbrowser.git"
+      "id": "github:apache/cordova-plugin-inappbrowser"
     },
     "is_top_level": true,
     "variables": {}
@@ -103,7 +93,31 @@
   "cordova-plugin-wkwebview-engine": {
     "source": {
       "type": "registry",
-      "id": "git+https://github.com/apache/cordova-plugin-wkwebview-engine.git"
+      "id": "github:apache/cordova-plugin-wkwebview-engine"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-file-transfer": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-file-transfer"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "es6-promise-plugin": {
+    "source": {
+      "type": "registry",
+      "id": "es6-promise-plugin"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "phonegap-plugin-multidex": {
+    "source": {
+      "type": "registry",
+      "id": "phonegap-plugin-multidex"
     },
     "is_top_level": true,
     "variables": {}

@@ -278,6 +278,12 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
+      "id": "es6-promise-plugin.Promise",
+      "file": "plugins/es6-promise-plugin/www/promise.js",
+      "pluginId": "es6-promise-plugin",
+      "runs": true
+    },
+    {
       "id": "phonegap-plugin-push.PushNotification",
       "file": "plugins/phonegap-plugin-push/www/push.js",
       "pluginId": "phonegap-plugin-push",
@@ -298,6 +304,8 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-splashscreen": "5.0.2",
     "cordova-plugin-whitelist": "1.3.4",
     "cordova-unique-device-id": "1.3.2",
+    "es6-promise-plugin": "4.2.2",
+    "phonegap-plugin-multidex": "1.0.0",
     "phonegap-plugin-push": "2.3.0"
   };
 });
